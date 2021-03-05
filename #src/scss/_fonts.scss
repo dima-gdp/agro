@@ -1,0 +1,20 @@
+// @font-face {
+// 	font-family: "Forum";
+// 	src: url("../fonts/Forum-regular.woff2") format("woff2"), url("../fonts/Forum-regular.woff") format("woff");
+// 	font-display: swap;
+// 	font-weight: 400;
+// 	font-style: normal;
+// }
+@mixin font($name, $url, $weight, $style) {
+	@font-face {
+		font-family: "#{$name}";
+		src: url("../#{$url}.woff2") format("woff2"), url("../#{$url}.woff") format("woff");
+		font-display: swap;
+		font-weight: $weight;
+		font-style: $style;
+	}
+}
+
+@include font(Roboto, fonts/roboto-condensed-v19-latin_cyrillic-300, 300, normal);
+@include font(Roboto, fonts/roboto-condensed-v19-latin_cyrillic-regular, 400, normal);
+@include font(Bodoni, fonts/BOD_B, 700, normal);
