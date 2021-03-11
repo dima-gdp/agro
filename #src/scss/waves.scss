@@ -1,6 +1,42 @@
 .decor-waves {
 	position: relative;
-	margin-top: 300px;
+	margin-bottom: 145px;
+	height: 204px;
+	&__container {
+		position: relative;
+		z-index: 10;
+	}
+	// .decor-waves__grid
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		grid-column-gap: 190px;
+		grid-row-gap: 50px;
+	}
+	// .decor-waves__column
+	&__column {
+	}
+	// .decor-waves__item
+	&__item {
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+	}
+	// .decor-waves__val
+	&__val {
+		margin-bottom: 36px;
+		font-family: "Bodoni";
+		font-size: 50px;
+		line-height: 1;
+		color: #000000;
+	}
+	// .decor-waves__key
+	&__key {
+		font-weight: 300;
+		font-size: 16px;
+		line-height: lh(26, 16);
+	}
+
 	&__svg {
 		position: absolute;
 		top: 0;
@@ -16,55 +52,58 @@
 		height: 100%;
 		img {
 			position: absolute;
-			top: 0;
 			left: -80px;
-			animation: list 9s ease-in-out infinite;
+			// animation: list 9s ease-in-out infinite;
+			&:nth-child(1) {
+				bottom: 40px;
+				animation: list 15s linear infinite;
+			}
 			&:nth-child(2) {
-				animation: list 9s ease-in-out 1s infinite;
-				top: 10px;
+				animation: list 15s linear 1s infinite;
+				top: 25px;
 			}
 			&:nth-child(3) {
-				animation: list 9s ease-in-out 2s infinite;
+				bottom: 40px;
+				animation: list 15s linear 3s infinite;
 			}
 			&:nth-child(4) {
-				animation: list 9s ease-in-out 3s infinite;
-				top: 40px;
+				animation: list 15s linear 5s infinite;
+				bottom: 45px;
 			}
 			&:nth-child(5) {
-				animation: list 9s ease-in-out 4s infinite;
+				animation: list 15s linear 6s infinite;
+				top: 66px;
 			}
-			top: 20px;
+
 			&:nth-child(6) {
-				animation: list 9s ease-in-out 5s infinite;
+				animation: list 15s linear 7s infinite;
+				top: 25px;
 			}
 			&:nth-child(7) {
-				animation: list 9s ease-in-out 6s infinite;
+				animation: list 15s linear 9s infinite;
+				bottom: 35px;
 			}
-			top: 70px;
 			&:nth-child(8) {
-				animation: list 9s ease-in-out 7s infinite;
+				animation: list 15s linear 11s infinite;
+				top: 70px;
 			}
 			&:nth-child(9) {
-				animation: list 9s ease-in-out 8s infinite;
+				animation: list 15s linear 13s infinite;
+				top: 35px;
 			}
 		}
 	}
 }
 
-@keyframes list {
-	0% {
-		transform: translate(0) rotate(0deg);
-	}
-	50% {
-	}
-	100% {
-		transform: translate(110vw) rotate(360deg);
-	}
-}
+// @keyframes list {
+// 	0% {
+// 		transform: translate(0, 0) rotate(0deg);
+// 	}
+// 	100% {
+// 		transform: translate(110vw, 0) rotate(360deg);
+// 	}
+// }
 
 .second {
 	visibility: hidden;
-}
-
-.list {
 }

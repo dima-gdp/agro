@@ -37,6 +37,13 @@ body {
 	top: 0;
 	width: 100%;
 }
+.title {
+	font-family: "Bodoni";
+	font-weight: 700;
+	font-size: 50px;
+	line-height: 1;
+	color: #000000;
+}
 
 .help-img {
 	visibility: hidden;
@@ -94,6 +101,12 @@ input[type="submit"] {
 }
 [data-src="#modal"] {
 	cursor: pointer;
+}
+
+.social {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 // Анимации

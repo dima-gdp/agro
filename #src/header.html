@@ -8,6 +8,8 @@
 	<link rel="stylesheet" href="css/swiper.min.css">
 	<link rel="stylesheet" href="css/alertify.min.css">
 	<link rel="stylesheet" href="css/default.min.css">
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/ion-rangeslider/2.3.1/css/ion.rangeSlider.min.css" />
 	<link rel="stylesheet" href="css/styles.css">
 	<!-- <link rel="apple-touch-icon-precomposed" sizes="57x57" href="favicon/apple-touch-icon-57x57.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/apple-touch-icon-114x114.png" />
@@ -43,7 +45,39 @@
 
 		<header class="header">
 			<div class="header__container container">
-
+				<a href="/" class="header__logo">
+					<img src="svg/logo.svg" alt="Логотип">
+				</a>
+				<nav class="header__nav">
+					<ul>
+						<li><a href="#">Сельхозтехника</a></li>
+						<li><a href="#">Сервис</a></li>
+						<li><a href="#">Запчасти</a></li>
+						<li class="current-menu-item"><a href="#">Б/у техника с наработкой</a></li>
+						<li><a href="#">Известкование и удобрения </a></li>
+						<li><a href="#">Финансирование </a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<ul class="header__social social">
+					<li>
+						<a href="#">@@include('svg/vk.svg')</a>
+					</li>
+					<li>
+						<a href="#">
+							@@include('svg/fb.svg')</a>
+					</li>
+					<li>
+						<a href="#">
+							@@include('svg/youtube.svg')</a>
+					</li>
+				</ul>
+				<a href="#" class="header__tel">
+					<svg width="12" height="12">
+						<use xlink:href="#tel"></use>
+					</svg>
+					<span>+7 (8172) 52-71-92</span>
+				</a>
 			</div>
 
 		</header>

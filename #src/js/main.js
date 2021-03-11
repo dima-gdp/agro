@@ -1,37 +1,199 @@
 $(document).ready(function () {
+
+	function setTransformSubtitle() {
+		const cat_subtitle = $('.item-cat__subtitle');
+		cat_subtitle.each(function (i, el) {
+			$(el).closest('.item-cat__text').css('transform', `translateY(${$(el).innerHeight()}px)`);
+		})
+	}
+
+	window.onload = function () {
+		setTransformSubtitle()
+	};
+
+
+
+
+
 	// TweenMax.registerPlugin(MorphSVGPlugin);
 
-	const tl_1 = new TimelineMax({ repeat: -1 });
-	const tl_2 = new TimelineMax({ repeat: -1 });
-	const tl_3 = new TimelineMax({ repeat: -1 });
-	const tl_4 = new TimelineMax({ repeat: -1 });
+	// if (document.querySelector('.decor-waves')) {
+	// 	const tl_1 = new TimelineMax({ repeat: -1 });
+	// 	const tl_2 = new TimelineMax({ repeat: -1 });
+	// 	const tl_3 = new TimelineMax({ repeat: -1 });
+	// 	const tl_4 = new TimelineMax({ repeat: -1 });
+
+	// 	tl_1.to(".start-1", 7, { morphSVG: ".second-1", shapeIndex: 7, ease: 'linear' })
+	// 	// .to(".start-1", 11, { morphSVG: ".second-4", shapeIndex: 7, ease: 'linear' });
+
+	// 	tl_2.to(".start-2", 7, { morphSVG: ".second-2", shapeIndex: 3, ease: 'linear' })
+	// 	// .to(".start-2", 9, { morphSVG: ".second-1", shapeIndex: 1, ease: 'linear' });
+
+	// 	tl_3.to(".start-3", 7, { morphSVG: ".second-3", ease: 'linear' })
+	// 	// .to(".start-3", 7, { morphSVG: ".second-2", ease: 'linear' });
+
+	// 	tl_4.to(".start-4", 7, { morphSVG: ".second-4", ease: 'linear' })
+	// 	// .to(".start-4", 4, { morphSVG: ".second-3", ease: 'linear' });
+
+	// }
+
+	$(window).resize(function () {
+		setTransformSubtitle()
+	});
+
+	const round = $('.round');
+	const roundBtn = $('.round__btn');
+	const border1 = $('.round__el--1');
+	const border2 = $('.round__el--2');
+	const border3 = $('.round__el--3');
+	const border4 = $('.round__el--4');
+	const border5 = $('.round__el--5');
+	const height = round.innerHeight() / 2;
+	const width = round.innerWidth() / 2;
+
+	round.mousemove(function (event) {
+
+
+
+		var x = event.offsetX - width;
+		var y = event.offsetY - height;
+
+		roundBtn.css('transform', `translate(${x / 10}px, ${y / 10}px)`);
+		border1.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+		border2.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+		border3.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+		border4.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+		border5.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
 
 
 
 
 
-	// tl_1.to(".start-1", 7, { morphSVG: ".second-1", shapeIndex: 7, ease: 'linear' })
-	// .to(".start-1", 11, { morphSVG: ".second-4", shapeIndex: 7, ease: 'linear' });
+	});
 
-	// tl_2.to(".start-2", 7, { morphSVG: ".second-2", shapeIndex: 3, ease: 'linear' })
-	// .to(".start-2", 9, { morphSVG: ".second-1", shapeIndex: 1, ease: 'linear' });
+	round.mouseleave(function () {
+		roundBtn.css('transform', 'translate(0px, 0px)');
+		border1.css('transform', 'translate(0px, 0px)');
+		border2.css('transform', 'translate(0px, 0px)');
+		border3.css('transform', 'translate(0px, 0px)');
+		border4.css('transform', 'translate(0px, 0px)');
+		border5.css('transform', 'translate(0px, 0px)');
+	})
 
-	// tl_3.to(".start-3", 7, { morphSVG: ".second-3", ease: 'linear' })
-	// .to(".start-3", 7, { morphSVG: ".second-2", ease: 'linear' });
-
-	// tl_4.to(".start-4", 7, { morphSVG: ".second-4", ease: 'linear' })
-	// .to(".start-4", 4, { morphSVG: ".second-3", ease: 'linear' });
 
 
-	// TweenMax.to(".start-1", 5, { morphSVG: ".second-1", shapeIndex: 7 });
-	// TweenMax.to(".start-2", 5, { morphSVG: ".second-2", shapeIndex: 7 });
-	// TweenMax.to(".start-3", 5, { morphSVG: ".second-3", shapeIndex: 7 });
-	// TweenMax.to(".start-4", 5, { morphSVG: ".second-4", shapeIndex: 7 });
-	// TweenMax.to(".start-4", 5, { morphSVG: ".second-4", shapeIndex: 7 });
-	// TweenMax.to(".list-start-1", 5, { morphSVG: ".list-second-1" });
-	// TweenMax.to(".list-start-2", 5, { morphSVG: ".list-second-2" });
-	// TweenMax.to(".list-start-3", 5, { morphSVG: ".list-second-3" });
-	// TweenMax.to(".list-start-4", 5, { morphSVG: ".list-second-4" });
+
+
+
+
+
+
+	// $('.item-cat').hover(
+	// 	function () {
+	// 		$('.item-cat__text').css('transform', 'translateY(0)')
+	// 	},
+	// 	function () {
+	// 		$('.item-cat__text').css('transform', 'translateY(55px)')
+	// 	}
+	// )
+
+
+
+	let my_range
+
+
+
+	// Swiper
+	const slider_pag = new Swiper('.swiper-container', {
+		slidesPerView: 1,
+		spaceBetween: 45,
+		on: {
+			slideChange: function () {
+				if (my_range.old_from != this.activeIndex) {
+					my_range.update({
+						from: this.activeIndex
+					})
+				}
+			},
+		}
+	});
+
+	$(".range-slider").ionRangeSlider({
+		grid: true,
+		from: 0,
+		values: ['2017', '2018', '2019', '2021', ' 2022', '2023'],
+		hide_min_max: true,
+		prettify_enabled: false,
+		grid_margin: false,
+
+		onChange: function (data) {
+			slider_pag.slideTo(data.from);
+		},
+	});
+
+	my_range = $(".range-slider").data("ionRangeSlider");
+
+
+	// const cursor = $('.cursor');
+
+	// cursor.on('mousedown', function (ev) {
+	// 	let offset = cursor.offset().left
+
+	// 	$(document).on('mousemove', function (e) {
+	// 		let x = e.clientX;
+
+	// 		cursor.css('left', `(${x - offset}px)`);
+	// 		// console.log(x)
+	// 	})
+
+	// 	$(document).on('mouseup', function (e) {
+	// 		$(document).off('mousemove')
+	// 		cursor.off('mouseup')
+	// 	})
+
+	// })
+
+	const slider_partners = new Swiper('.partners__slider', {
+		slidesPerView: 5,
+		spaceBetween: 40,
+		// loop: true,
+		// autoplay: {
+		// 	delay: 4000,
+		// },
+		// navigation: {
+		// 	nextEl: '.nav-slider--next',
+		// 	prevEl: '.nav-slider--prev',
+		// },
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			375: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			576: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			768: {
+				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+			993: {
+				slidesPerView: 5,
+				spaceBetween: 40,
+			},
+		}
+	});
+
+
+
+
+
+
+
 	// objectFitImages();
 
 	// Табы
@@ -58,37 +220,7 @@ $(document).ready(function () {
 	// }
 
 
-	// Swiper
-	// const slider_pag = new Swiper('.pag-hero__slider', {
-	// 	slidesPerView: 'auto',
-	// 	spaceBetween: 45,
-	// 	loop: false,
-	// 	loopedSlides: 1,
-	// 	slideToClickedSlide: true,
-	// 	breakpoints: {
-	// 		320: {
-	// 			spaceBetween: 15,
-	// 		},
-	// 		374: {
-	// 			spaceBetween: 25,
-	// 		},
-	// 		577: {
-	// 			spaceBetween: 35,
-	// 		},
-	// 		625: {
-	// 			spaceBetween: 40,
-	// 		},
-	// 		769: {
-	// 			spaceBetween: 15,
-	// 		},
-	// 		993: {
-	// 			spaceBetween: 30,
-	// 		},
-	// 		1440: {
-	// 			spaceBetween: 45,
-	// 		},
-	// 	}
-	// });
+
 
 	// function mobileSlider() {
 	// 	if ($(window).innerWidth() <= 1100) {

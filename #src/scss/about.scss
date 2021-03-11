@@ -1,0 +1,37 @@
+.about {
+	// .about__container
+	&__container {
+	}
+	// .about__flex
+	&__flex {
+		display: flex;
+		justify-content: space-between;
+	}
+	// .about__left
+	&__left {
+		flex: 1 0 auto;
+		margin-left: calc((100vw - 100%) / -2);
+		max-width: 992px;
+		border-radius: 0px 400px 400px 0px;
+		overflow: hidden;
+	}
+	// .about__title
+	&__title {
+		margin-bottom: 38px;
+	}
+	// .about__subtitle
+	&__subtitle {
+	}
+	// .about__right
+	&__right {
+		flex: 0 0 39.6%;
+		margin-left: 60px;
+	}
+	// .about__image
+	&__image {
+		padding-bottom: 80.5%;
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+}

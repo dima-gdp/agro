@@ -1,9 +1,21 @@
 @@include('header.html')
 
-<div class="main">
-	<section class="hero">
+<main class="main">
+	<section class="hero" style="background-image: url(img/hero.jpg);">
 		<div class="hero__container container">
-			<h1>Hello world!</h1>
+			<div class="hero__left">
+				<h1 class="hero__title">Сельскохозяйственная техника, с которой работают профессионалы</h1>
+				<div class="hero__subtitle">Техника, запчасти и полный цикл сервиса от проверенного партнера</div>
+				<div class="hero__btn btn">Получить консультацию @@include('svg/arrow-hero.svg')</div>
+			</div>
+			<div class="hero__right">
+				<div class="hero__item">
+					<div class="hero__logo">
+						<img src="img/hero-logo.png" alt="">
+					</div>
+					<div class="hero__text">Аккредитованный поставщик «Росагролизинг» </div>
+				</div>
+			</div>
 		</div>
 	</section>
 
@@ -50,18 +62,358 @@
 			<img src="svg/list-8.svg" alt="">
 			<img src="svg/list-9.svg" alt="">
 		</div>
-
-
-		<div class="decor-waves__container">
+		<div class="decor-waves__container container">
+			<div class="decor-waves__grid">
+				<div class="decor-waves__column">
+					<div class="decor-waves__item">
+						<div class="decor-waves__val">c 2003</div>
+						<div class="decor-waves__key">года успешно реализуем сельхозтехнику</div>
+					</div>
+				</div>
+				<div class="decor-waves__column">
+					<div class="decor-waves__item">
+						<div class="decor-waves__val">2500+
+						</div>
+						<div class="decor-waves__key">единиц техники реализовано</div>
+					</div>
+				</div>
+				<div class="decor-waves__column">
+					<div class="decor-waves__item">
+						<div class="decor-waves__val">24/7</div>
+						<div class="decor-waves__key">Принимаем обращения и оказываем сервисные услуги</div>
+					</div>
+				</div>
+				<div class="decor-waves__column">
+					<div class="decor-waves__item">
+						<div class="decor-waves__val">15000+</div>
+						<div class="decor-waves__key">Запчастей всегда в наличии на складе</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 
+	<section class="categories">
+		<div class="categories__container container">
+			<div class="categories__grid">
+				<div class="categories__column">
+					<div class="categories__item item-cat" style="background-image: url(img/categories-1.jpg);">
+						<div class="item-cat__text">
+							<h3 class="item-cat__title">Самоходная техника</h3>
+							<div class="item-cat__subtitle">Партнерство с ведущими мировыми производителями определяет наличие.</div>
+						</div>
+						<div class="item-cat__colos">
+							<img src="svg/colos.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="categories__column">
+					<div class="categories__item item-cat" style="background-image: url(img/categories-2.jpg);">
+						<div class="item-cat__text">
+							<h3 class="item-cat__title">Самоходная техника</h3>
+							<div class="item-cat__subtitle">Партнерство с ведущими мировыми производителями определяет наличие.</div>
+						</div>
+						<div class="item-cat__colos">
+							<img src="svg/colos.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="categories__column">
+					<div class="categories__item item-cat" style="background-image: url(img/categories-3.jpg);">
+						<div class="item-cat__text">
+							<h3 class="item-cat__title">Самоходная техника</h3>
+							<div class="item-cat__subtitle">Партнерство с ведущими мировыми производителями определяет наличие.</div>
+						</div>
+						<div class="item-cat__colos">
+							<img src="svg/colos.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="categories__column">
+					<div class="categories__item item-cat" style="background-image: url(img/categories-4.jpg);">
+						<div class="item-cat__text">
+							<h3 class="item-cat__title">Самоходная техника</h3>
+							<div class="item-cat__subtitle">Партнерство с ведущими мировыми производителями определяет наличие.</div>
+						</div>
+						<div class="item-cat__colos">
+							<img src="svg/colos.svg" alt="">
+						</div>
+					</div>
+				</div>
+				<div class="categories__column">
+					<div class="categories__btn-item">
+						<div class="round">
+							<div class="round__btn">
+								Полный каталог
+								@@include('svg/arrow-hero.svg')
+							</div>
+							<span class="round__el round__el--1"></span>
+							<span class="round__el round__el--2"></span>
+							<span class="round__el round__el--3">
+								<img src="svg/cat-list-2.svg" alt="">
+								<img src="svg/cat-list-4.svg" alt="">
+							</span>
+							<span class="round__el round__el--4">
+								<img src="svg/cat-list-1.svg" alt="">
+								<img src="svg/cat-list-5.svg" alt="">
+							</span>
+							<span class="round__el round__el--5">
+								<img src="svg/cat-list-3.svg" alt="">
+								<img src="svg/cat-list-6.svg" alt="">
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="services">
+		<div class="services__container container">
+			<h2 class="services__title title">Агроснаб - всегда рядом</h2>
+			<div class="services__grid">
+				<div class="services__column">
+					<div class="services__item item-services">
+						<div class="item-services__el">
+							<div class="item-services__image">
+								@@include('svg/near-1.svg')
+							</div>
+							<p class="item-services__title">Подбор техники</p>
+							<div class="item-services__subtitle">Совместное определение с заказчиком
+								оптимального парка техники исходя из потребностей
+								хозяйства.</div>
+						</div>
+						<div class="item-services__el">
+							<div class="item-services__image">
+								@@include('svg/near-2.svg')
+							</div>
+							<p class="item-services__title">Поставка техники</p>
+							<div class="item-services__subtitle">Выбор эффективного способа владения: новая техника или с наработкой,
+								лизинг.</div>
+						</div>
+						<div class="item-services__el">
+							<div class="item-services__image">
+								@@include('svg/near-3.svg')
+							</div>
+							<p class="item-services__title">Лизинг</p>
+							<div class="item-services__subtitle">Заполнение заявки в Росагролизинг нашим специалстом</div>
+						</div>
+					</div>
+				</div>
+				<div class="services__column">
+					<div class="services__logo-item">
+						<div class="round-serv">
+							<div class="round-serv__btn">
+								<img src="svg/logo.svg" alt="">
+							</div>
+							<span class="round-serv__el round-serv__el--1"></span>
+							<span class="round-serv__el round-serv__el--2"></span>
+							<span class="round-serv__el round-serv__el--3"></span>
+						</div>
+					</div>
+				</div>
+				<div class="services__column">
+					<div class="services__item item-services">
+						<div class="item-services__el">
+							<div class="item-services__image">
+								@@include('svg/near-1.svg')
+							</div>
+							<p class="item-services__title">Подбор техники</p>
+							<div class="item-services__subtitle">Совместное определение с заказчиком
+								оптимального парка техники исходя из потребностей
+								хозяйства.</div>
+						</div>
+						<div class="item-services__el">
+							<div class="item-services__image">
+								@@include('svg/near-2.svg')
+							</div>
+							<p class="item-services__title">Поставка техники</p>
+							<div class="item-services__subtitle">Выбор эффективного способа владения: новая техника или с наработкой,
+								лизинг.</div>
+						</div>
+						<div class="item-services__el">
+							<div class="item-services__image">
+								@@include('svg/near-3.svg')
+							</div>
+							<p class="item-services__title">Лизинг</p>
+							<div class="item-services__subtitle">Заполнение заявки в Росагролизинг нашим специалстом</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="consalt">
+		<div class="consalt__container container">
+			<div class="consalt__flex">
+				<div class="consalt__left">
+					<h2 class="consalt__title title">Не продаем, а подбираем</h2>
+					<div class="consalt__subtitle type-style">
+						<p>При выборе техники возникает масса вопросов. Заполните поля ниже, мы перезвоним и дадим бесплатную
+							консультацию по любому из наших предложений.</p>
+						<p>Поможем с выбором исходя из Вашего бюджета и потребностей, расскажем на чем экономить нельзя, а за что
+							переплачивать не стоит</p>
+					</div>
+					<div class="consalt__form">
+						<!-- wp-form -->
+						<div class="wpcf7">
+							<form class="wpcf7-form">
+								<span class="wpcf7-form-control-wrap">
+									<input type="text" class="wpcf7-form-control" placeholder="Имя">
+								</span>
+								<span class="wpcf7-form-control-wrap">
+									<input type="tel" class="wpcf7-form-control" placeholder="Телефон">
+								</span>
+								<span class="wpcf7-form-control-wrap">
+									<input type="email" class="wpcf7-form-control" placeholder="E-mail">
+								</span>
+								<input type="submit" value="Жду звонка" class="wpcf7-form-control wpcf7-submit">
+							</form>
+						</div>
+						<!-- end -->
+					</div>
+					<div class="consalt__privacy">
+						Даю согласие на обработку моих персональных данных в соответствии с регламентирующими <span
+							data-src="#modal-polit">документами сайта</span>
+					</div>
+				</div>
+				<div class="consalt__right">
+					<div class="consalt__image" style="background-image: url(img/consult.jpg);"></div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="partners">
+		<div class="partners__container container">
+			<h2 class="partners__title title">В партнерстве с лидерами</h2>
+			<div class="partners__slider-wrapper">
+				<div class="partners__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-1.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-2.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-3.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-4.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-5.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-6.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-7.png" alt="">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="partners__logo">
+								<img src="img/partner-8.png" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<button class="nav-slider__btn nav-slider--prev">
+					@@include('svg/arrow-left.svg')
+				</button>
+				<button class="nav-slider__btn nav-slider--next">
+					@@include('svg/arrow-right.svg')
+				</button>
+			</div>
+		</div>
+	</section>
+
+	<section class="about">
+		<div class="about__container container">
+			<div class="about__flex">
+				<div class="about__left">
+					<div class="about__image" style="background-image: url(img/about.jpg);"></div>
+				</div>
+				<div class="about__right">
+					<h2 class="about__title title">О компании</h2>
+					<div class="about__subtitle type-style">
+						<p>Компания «Агроснаб Северо-Запад» основана 23 апреля 2003 года на базе уже существовавшего более 50 лет
+							районного предприятия. За годы работы реализовано более
+							2 500 единиц техники.</p>
+						<p>Ежегодно портфель компании пополняется новыми брендами, технологиями и продуктами, которые позволяют
+							решать любые вопросы, стоящие перед аграриями.</p>
+						<p>На данный момент Компания работает и реализует свои услуги в Вологодской, Архангельской, Ленинградской,
+							Ярославской, Кировской, Костромской и Тверской областях.</p>
+						<h2>Основные направления деятельности:</h2>
+						<ul>
+							<li>Поставка техники отечественных и зарубежных производителей для предприятий
+								сельскохозяйственного комплекса.</li>
+							<li>Предпродажная подготовка, гарантийный ремонт и сервисное обслуживание
+								техники в течение всего срока эксплуатации.</li>
+							<li>Обучение персонала заказчика.</li>
+							<li>Оптово-розничная торговля запасными частями и расходными материалами для
+								техники.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="history">
+		<div class="history__contaier container">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">1111111111111111</div>
+					<div class="swiper-slide">222222222222222</div>
+					<div class="swiper-slide">33333333333333333333333</div>
+					<div class="swiper-slide">4444444444444444</div>
+					<div class="swiper-slide">5555555555555555</div>
+					<div class="swiper-slide">666666666666666</div>
+				</div>
+			</div>
+			<div class="history__control">
+				<input type="text" class="range-slider" name="my_range" value="" />
+				<!-- <div class="line">
+					<div class="cursor"></div>
+				</div> -->
+				<!-- <div class="item">
+					<div class="dot"></div>
+					<div class="year">2021</div>
+				</div>
+				<div class="item">
+					<div class="dot"></div>
+					<div class="year">2022</div>
+				</div>
+				<div class="item">
+					<div class="dot"></div>
+					<div class="year">2023</div>
+				</div> -->
+			</div>
+		</div>
+	</section>
 
 
 
 
 
-</div>
+
+</main>
 
 
 @@include('footer.html')

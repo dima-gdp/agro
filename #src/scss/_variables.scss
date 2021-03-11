@@ -1,5 +1,6 @@
 $font-family: "Roboto", sans-serif;
 $minwidth: 320px;
+$hover-green: #01873d;
 
 @function vw($value, $base: 1920) {
 	@return $value / $base * 100vw;
