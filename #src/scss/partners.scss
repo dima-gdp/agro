@@ -1,7 +1,7 @@
 .partners {
-	margin-bottom: 191px;
+	margin-bottom: 140px;
 	@media (max-width: 1920px) {
-		@include adaptiv(margin-bottom, 191, 30, 1920, 320);
+		@include adaptiv(margin-bottom, 140, 30, 1920, 320);
 	}
 	// .partners__container
 	&__container {
@@ -69,10 +69,13 @@
 	align-items: center;
 	background: transparent;
 	transition: 0.3s;
+	width: 30px;
+	height: 30px;
 
 	svg {
 		width: 20px;
 		height: 12px;
+		transition: 0.3s linear;
 	}
 }
 
@@ -80,7 +83,9 @@
 	left: 0;
 	transform: translateY(-50%);
 	&:hover {
-		transform: translateX(-5px) translateY(-50%);
+		svg {
+			transform: translateX(-5px);
+		}
 	}
 }
 .nav-slider--next {

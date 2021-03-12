@@ -1,7 +1,10 @@
 .decor-waves {
 	position: relative;
 	margin-bottom: 145px;
-	height: 204px;
+	// height: 204px;
+	@media (max-width: 1440px) {
+		@include adaptiv(margin-bottom, 145, 50, 1440, 320);
+	}
 	&__container {
 		position: relative;
 		z-index: 10;
@@ -12,6 +15,21 @@
 		grid-template-columns: repeat(4, 1fr);
 		grid-column-gap: 190px;
 		grid-row-gap: 50px;
+		@media (max-width: 1919px) {
+			@include adaptiv(grid-column-gap, 190, 50, 1919, 993);
+		}
+		@media (max-width: 992px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-gap: 60px;
+		}
+		@media (max-width: 576px) {
+			grid-column-gap: 50px;
+			grid-row-gap: 40px;
+		}
+		@media (max-width: 420px) {
+			grid-template-columns: repeat(1, 1fr);
+			grid-row-gap: 35px;
+		}
 	}
 	// .decor-waves__column
 	&__column {
@@ -29,6 +47,19 @@
 		font-size: 50px;
 		line-height: 1;
 		color: #000000;
+		@media (max-width: 1919px) {
+			@include adaptiv(font-size, 50, 40, 1919, 993);
+		}
+		@media (max-width: 1200px) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: 992px) {
+			@include adaptiv(font-size, 40, 31, 992, 421);
+		}
+		@media (max-width: 420px) {
+			@include adaptiv(font-size, 31, 27, 420, 320);
+			margin-bottom: 5px;
+		}
 	}
 	// .decor-waves__key
 	&__key {

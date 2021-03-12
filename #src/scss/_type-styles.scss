@@ -24,8 +24,8 @@
 		font-size: 18px;
 		line-height: 1.67;
 		font-weight: 300;
-		@media (max-width: 992px) {
-			@include adaptiv(font-size, 18, 15, 992, 320);
+		@media (max-width: 1200px) {
+			@include adaptiv(font-size, 18, 15, 1200, 320);
 		}
 	}
 

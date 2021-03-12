@@ -1,11 +1,17 @@
 .services {
 	margin-bottom: 200px;
+	@media (max-width: 1440px) {
+		@include adaptiv(margin-bottom, 200, 50, 1440, 320);
+	}
 	// .services__container
 	&__container {
 	}
 	// .services__title
 	&__title {
 		margin-bottom: 97px;
+		@media (max-width: 1440px) {
+			@include adaptiv(margin-bottom, 97, 35, 1440, 320);
+		}
 	}
 	// .services__grid
 	&__grid {
@@ -13,9 +19,39 @@
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-column-gap: 80px;
 		grid-row-gap: 80px;
+		@media (max-width: 1340px) {
+			grid-column-gap: 45px;
+			grid-row-gap: 45px;
+		}
+		@media (max-width: 1300px) {
+			grid-column-gap: 25px;
+			grid-row-gap: 25px;
+		}
+		@media (max-width: 1200px) {
+			grid-template-columns: 1fr 1fr;
+			grid-column-gap: 40px;
+		}
+		@media (max-width: 720px) {
+			grid-template-columns: 1fr;
+			grid-row-gap: 40px;
+		}
+		@media (max-width: 370px) {
+			grid-row-gap: 30px;
+		}
 	}
 	// .services__column
 	&__column {
+		@media (max-width: 1200px) {
+			&:nth-child(2) {
+				order: 2;
+				grid-column: span 2;
+			}
+		}
+		@media (max-width: 720px) {
+			&:nth-child(2) {
+				grid-column: span 1;
+			}
+		}
 	}
 	// .services__item
 	&__item {
@@ -25,6 +61,13 @@
 	&__logo-item {
 		height: 100%;
 		position: relative;
+		@media (max-width: 1200px) {
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 40px;
+			height: 250px;
+			width: 250px;
+		}
 	}
 }
 
@@ -36,6 +79,12 @@
 		grid-column-gap: 24px;
 		&:not(:last-child) {
 			margin-bottom: 82px;
+			@media (max-width: 1340px) {
+				margin-bottom: 40px;
+			}
+			@media (max-width: 370px) {
+				margin-bottom: 30px;
+			}
 		}
 	}
 	// .item-services__image
@@ -53,6 +102,12 @@
 		font-size: 24px;
 		line-height: 1.42;
 		color: #000000;
+		@media (max-width: 1200px) {
+			margin-bottom: 10px;
+		}
+		@media (max-width: 576px) {
+			@include adaptiv(font-size, 24, 20, 576, 320);
+		}
 	}
 	// .item-services__subtitle
 	&__subtitle {
@@ -60,6 +115,9 @@
 		font-size: 16px;
 		line-height: 1.6;
 		color: #000000;
+		@media (max-width: 370px) {
+			font-size: 15px;
+		}
 	}
 }
 
@@ -84,6 +142,7 @@
 		border-radius: 100%;
 		overflow: hidden;
 		z-index: 20;
+		padding: 30px;
 	}
 	// .round-serv__el
 	&__el {

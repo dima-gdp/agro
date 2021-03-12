@@ -3,6 +3,14 @@
 	width: 100%;
 	padding: 0 60px;
 	margin: 0 auto;
+	@media (max-width: 1300px) {
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+	@media (max-width: 768px) {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
 }
 
 html,
@@ -43,6 +51,9 @@ body {
 	font-size: 50px;
 	line-height: 1;
 	color: #000000;
+	@media (max-width: 1440px) {
+		@include adaptiv(font-size, 50, 28, 1440, 320);
+	}
 }
 
 .help-img {
@@ -107,6 +118,24 @@ input[type="submit"] {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	&__decor {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		svg {
+			stroke-dasharray: 200;
+			stroke-dashoffset: 200;
+			transition: 0.7s linear;
+		}
+	}
+
+	&__icon {
+		svg {
+			max-width: 25px;
+			max-height: 25px;
+		}
+	}
 }
 
 // Анимации

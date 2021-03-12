@@ -8,9 +8,96 @@ $(document).ready(function () {
 	}
 
 	window.onload = function () {
-		setTransformSubtitle()
+		if ($(window).innerWidth() >= 1201) {
+			setTransformSubtitle()
+			$(window).resize(function () {
+				setTransformSubtitle()
+			});
+			if (document.querySelector('.consalt__right')) {
+
+				const image = $('.consalt__image')
+				const offsetBlock = image.offset().top;
+
+				const image2 = $('.about__image')
+				const offsetBlock2 = image2.offset().top;
+
+				function parallax() {
+					// let scrollPos = 0;
+					let offsetScroll = $(document).scrollTop();
+
+					const start = offsetBlock - $(window).innerHeight() / 2;
+					const finish = offsetBlock + $(window).innerHeight() / 3;
+					const raznica = finish - start;
+					const index = 50 / raznica;
+
+					if (offsetScroll >= start && offsetScroll < finish) {
+
+						let value = offsetScroll - offsetBlock + $(window).innerHeight() / 2;
+						let ratio = 1;
+						image.css('background-position-x', `${75 - (value * index)}%`)
+					}
+				}
+
+				function parallax2() {
+					// let scrollPos = 0;
+					let offsetScroll = $(document).scrollTop();
+
+					const start = offsetBlock2 - $(window).innerHeight() / 2;
+					const finish = offsetBlock2 + $(window).innerHeight() / 3;
+					const raznica = finish - start;
+					const index = 50 / raznica;
+
+					if (offsetScroll >= start && offsetScroll < finish) {
+
+						let value = offsetScroll - offsetBlock2 + $(window).innerHeight() / 2;
+						let ratio = 1;
+						image2.css('background-position-x', `${50 - (value * index)}%`)
+					}
+				}
+
+
+
+				$(window).on('scroll', function () {
+					parallax()
+					parallax2()
+				});
+			}
+		}
 	};
 
+	if ($(window).innerWidth() >= 1201) {
+		const round = $('.round');
+		const roundBtn = $('.round__btn');
+		const border1 = $('.round__el--1');
+		const border2 = $('.round__el--2');
+		const border3 = $('.round__el--3');
+		const border4 = $('.round__el--4');
+		const border5 = $('.round__el--5');
+		const height = round.innerHeight() / 2;
+		const width = round.innerWidth() / 2;
+
+		round.mousemove(function (event) {
+
+			var x = event.offsetX - width;
+			var y = event.offsetY - height;
+
+			roundBtn.css('transform', `translate(${x / 10}px, ${y / 10}px)`);
+			border1.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+			border2.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+			border3.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+			border4.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+			border5.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+		});
+
+		round.mouseleave(function () {
+			roundBtn.css('transform', 'translate(0px, 0px)');
+			border1.css('transform', 'translate(0px, 0px)');
+			border2.css('transform', 'translate(0px, 0px)');
+			border3.css('transform', 'translate(0px, 0px)');
+			border4.css('transform', 'translate(0px, 0px)');
+			border5.css('transform', 'translate(0px, 0px)');
+		})
+	}
 
 
 
@@ -37,55 +124,13 @@ $(document).ready(function () {
 
 	// }
 
-	$(window).resize(function () {
-		setTransformSubtitle()
-	});
-
-	const round = $('.round');
-	const roundBtn = $('.round__btn');
-	const border1 = $('.round__el--1');
-	const border2 = $('.round__el--2');
-	const border3 = $('.round__el--3');
-	const border4 = $('.round__el--4');
-	const border5 = $('.round__el--5');
-	const height = round.innerHeight() / 2;
-	const width = round.innerWidth() / 2;
-
-	round.mousemove(function (event) {
-
-
-
-		var x = event.offsetX - width;
-		var y = event.offsetY - height;
-
-		roundBtn.css('transform', `translate(${x / 10}px, ${y / 10}px)`);
-		border1.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-		border2.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-		border3.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-		border4.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-		border5.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
 
 
 
 
-
-	});
-
-	round.mouseleave(function () {
-		roundBtn.css('transform', 'translate(0px, 0px)');
-		border1.css('transform', 'translate(0px, 0px)');
-		border2.css('transform', 'translate(0px, 0px)');
-		border3.css('transform', 'translate(0px, 0px)');
-		border4.css('transform', 'translate(0px, 0px)');
-		border5.css('transform', 'translate(0px, 0px)');
+	$('.burger').click(function () {
+		$(this).toggleClass('active')
 	})
-
-
-
-
-
-
-
 
 
 	// $('.item-cat').hover(
@@ -99,12 +144,18 @@ $(document).ready(function () {
 
 
 
+
+
+
+
+
+
 	let my_range
 
 
 
 	// Swiper
-	const slider_pag = new Swiper('.swiper-container', {
+	const slider_pag = new Swiper('.history__slider', {
 		slidesPerView: 1,
 		spaceBetween: 45,
 		on: {
@@ -119,12 +170,14 @@ $(document).ready(function () {
 	});
 
 	$(".range-slider").ionRangeSlider({
+		skin: "round",
 		grid: true,
+		grid_snap: true,
 		from: 0,
-		values: ['2017', '2018', '2019', '2021', ' 2022', '2023'],
+		values: ['2017', '2018', '2019', '2021', '', '2022', '2023', '2017', '2018', '2019', '2021', '', '2022', '2023', '2017', '2018', '2019', '2021', '', '2022', '2023'],
 		hide_min_max: true,
+		hide_from_to: true,
 		prettify_enabled: false,
-		grid_margin: false,
 
 		onChange: function (data) {
 			slider_pag.slideTo(data.from);
@@ -142,7 +195,7 @@ $(document).ready(function () {
 	// 	$(document).on('mousemove', function (e) {
 	// 		let x = e.clientX;
 
-	// 		cursor.css('left', `(${x - offset}px)`);
+	// 		cursor.css('left', `(${ x - offset} px)`);
 	// 		// console.log(x)
 	// 	})
 
@@ -160,10 +213,10 @@ $(document).ready(function () {
 		// autoplay: {
 		// 	delay: 4000,
 		// },
-		// navigation: {
-		// 	nextEl: '.nav-slider--next',
-		// 	prevEl: '.nav-slider--prev',
-		// },
+		navigation: {
+			nextEl: '.partners__next',
+			prevEl: '.partners__prev',
+		},
 		breakpoints: {
 			320: {
 				slidesPerView: 1,
