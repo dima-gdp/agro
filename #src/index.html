@@ -52,7 +52,16 @@
 
 		</svg>
 		<div class="decor-waves__lists">
-			<img src="svg/list-1.svg" alt="">
+			@@include('svg/list-1.svg')
+			@@include('svg/list-2.svg')
+			@@include('svg/list-3.svg')
+			@@include('svg/list-4.svg')
+			@@include('svg/list-5.svg')
+			@@include('svg/list-6.svg')
+			@@include('svg/list-7.svg')
+			@@include('svg/list-8.svg')
+			@@include('svg/list-9.svg')
+			<!-- <img src="svg/list-1.svg" alt="">
 			<img src="svg/list-2.svg" alt="">
 			<img src="svg/list-3.svg" alt="">
 			<img src="svg/list-4.svg" alt="">
@@ -60,7 +69,7 @@
 			<img src="svg/list-6.svg" alt="">
 			<img src="svg/list-7.svg" alt="">
 			<img src="svg/list-8.svg" alt="">
-			<img src="svg/list-9.svg" alt="">
+			<img src="svg/list-9.svg" alt=""> -->
 		</div>
 		<div class="decor-waves__container container">
 			<div class="decor-waves__grid">
@@ -150,16 +159,22 @@
 							<span class="round__el round__el--1"></span>
 							<span class="round__el round__el--2"></span>
 							<span class="round__el round__el--3">
-								<img src="svg/cat-list-2.svg" alt="">
-								<img src="svg/cat-list-4.svg" alt="">
+								@@include('svg/cat-list-2.svg')
+								@@include('svg/cat-list-4.svg')
+								<!-- <img src="svg/cat-list-2.svg" alt="">
+								<img src="svg/cat-list-4.svg" alt=""> -->
 							</span>
 							<span class="round__el round__el--4">
-								<img src="svg/cat-list-1.svg" alt="">
-								<img src="svg/cat-list-5.svg" alt="">
+								@@include('svg/cat-list-1.svg')
+								@@include('svg/cat-list-5.svg')
+								<!-- <img src="svg/cat-list-1.svg" alt="">
+								<img src="svg/cat-list-5.svg" alt=""> -->
 							</span>
 							<span class="round__el round__el--5">
-								<img src="svg/cat-list-3.svg" alt="">
-								<img src="svg/cat-list-6.svg" alt="">
+								@@include('svg/cat-list-2.svg')
+								@@include('svg/cat-list-4.svg')
+								<!-- <img src="svg/cat-list-2.svg" alt="">
+								<img src="svg/cat-list-4.svg" alt=""> -->
 							</span>
 						</div>
 					</div>
@@ -274,8 +289,8 @@
 						<!-- end -->
 					</div>
 					<div class="consalt__privacy">
-						Даю согласие на обработку моих персональных данных в соответствии с регламентирующими <span
-							data-src="#modal-polit">документами сайта</span>
+						Нажимая кнопку «Жду звонка», я принимаю <span data-src="#modal-polit">политику конфиденциальности</span>
+						сайта
 					</div>
 				</div>
 				<div class="consalt__right">
@@ -375,73 +390,1124 @@
 		</div>
 	</section>
 
-	<section class="history">
-		<div class="history__contaier container">
-			<h2 class="history__title title"></h2>
-			<div class="history__flex">
-				<div class="history__left">
-					<div class="history__photo">
-						<img src="img/history-photo.jpg" alt="">
+	<section class="company__history js-company-history"><a id="history" class="anchor"></a>
+		<div class="company__container container">
+			<h2 class="company__title title">История компании</h2>
+			<div class="company__flex">
+				<div class="company__left">
+					<div class="company__history-info js-company-history-info" style="opacity: 1;">
+						<figure class="company__history-figure"><img src="img/history-photo.jpg"
+								class="company__history-figure-img js-company-history-year-img"></figure>
 					</div>
-					<div class="history__underphoto">
-						<button class="nav-slider__btn nav-slider--prev">
+					<div class="product-slider__controls-arrows history-about-news-list-slider">
+						<button type="button" class="js-history-slider-arrow-prev">
 							@@include('svg/arrow-left.svg')
 						</button>
-						<span class="history__value">2020</span>
-						<button class="nav-slider__btn nav-slider--next">
+						<div class="company__history-year js-company-history-year">2019</div>
+						<button type="button" class="js-history-slider-arrow-next">
 							@@include('svg/arrow-right.svg')
 						</button>
 					</div>
 				</div>
-				<div class="history__right">
-					<div class="history__slider">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide">
-								<div class="history__item">
-									bla bla
+				<div class="company__right">
+					<div class="company__slider-wrapper">
+						<div class="company__history-slider owl-carousel js-company-history-slider owl-loaded owl-drag">
+							<div class="owl-stage-outer">
+								<div class="owl-stage"
+									style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 60368px;">
+									<div class="owl-item active" style="width: auto; margin-right: 80px;">
+										<div data-img="img/history-photo.jpg" data-year="2019" class="company__history-slide type-style">
+											<p>В Кировске отметили 90-летие комбината «Апатит». Юбилей
+												предприятия – важная веха в истории развития близлежащих городов
+												Кировска и Апатитов, всей Мурманской области и отечественной
+												горно-химической отрасли.
+												На Восточном руднике отгрузили юбилейную двухмиллиардную тонну
+												апатит-нефелиновой руды, добытую со дня основания комбината
+												«Апатит», ныне – Кировский филиал АО «Апатит».
+											</p>
+											<p>В Кировске отметили 90-летие комбината «Апатит». Юбилей
+												предприятия – важная веха в истории развития близлежащих городов
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/193/193966f1a46e2f061b987e90b2892798.png" data-year="2019"
+											class="company__history-slide">
+											<p class="p"></p>
+											<div>АО «Научно-исследовательский институт по удобрениям и
+												инсектофунгицидам имени профессора Я.В.&nbsp;Самойлова» (Группа
+												«ФосАгро») отметил 100-летний юбилей. НИУИФ – старейший (основан
+												в 1919 году) и единственный в России научно-исследовательский
+												институт, специализирующийся на исследованиях в области
+												технологий переработки фосфатного сырья и производства фосфорной
+												и серной кислот, фосфор- и азотсодержащих минеральных удобрений.
+												<b><a target="_blank"
+														href="https://www.phosagro.ru/press/company/prezident-rossii-vladimir-putin-obyavil-blagodarnost-za-bolshoy-vklad-v-razvitie-khimicheskoy-otrasl/"
+														class=" link">Подробнее</a></b>
+											</div>
+											<p></p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/193/193966f1a46e2f061b987e90b2892798.png" data-year="2019"
+											class="company__history-slide">
+											<p class="p">
+												Завершена реорганизация АО «Апатит» (г. Череповец) путем
+												присоединения к нему волховского АО «Метахим» (с 01.04.2019 года
+												Волховский филиал АО «Апатит») и АО «ФосАгро-Транс» (г.
+												Череповец). Таким образом были объединены производственные и
+												логистические активы Группы «ФосАгро» в одно юридическое лицо.
+												Данные организационные изменения должны способствовать
+												дальнейшему повышению эффективности компании и управления
+												бизнес-процессами.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/193/193966f1a46e2f061b987e90b2892798.png" data-year="2019"
+											class="company__history-slide">
+											<p class="p">
+												В Совете директоров ПАО «ФосАгро» создан Комитет по устойчивому
+												развитию. Его возглавила Ирина Бокова – независимый член Совета
+												директоров, занимавшая пост генерального директора ЮНЕСКО в
+												течение двух четырехлетних сроков (2009 - 2017 гг.). Комитет
+												призван содействовать в реализации инициатив компании,
+												направленных на сохранение окружающей среды, обеспечение
+												безопасных условий труда, развитие регионов присутствия,
+												реализацию крупных социальных программ. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/193/193966f1a46e2f061b987e90b2892798.png" data-year="2019"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» и Организация Объединённых Наций по вопросам
+												образования, науки и культуры (ЮНЕСКО) договорились о продлении
+												сотрудничества в реализации программы грантов для молодых
+												талантливых учёных со всего мира «Зеленая химия для жизни» до
+												2022 г. Этот проект - первый в истории ЮНЕСКО и всей системы
+												ООН, реализуемый за счет средств российского бизнеса. Продление
+												соглашения означает, что взнос ФосАгро в реализацию проекта с
+												2013 по 2022 гг. составит почти 2,5 млн долларов США. С самого
+												старта поддержку этой инициативе оказывает Министерство
+												иностранных дел РФ и Комиссия РФ по делам ЮНЕСКО. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="img/history-photo.jpg" data-year="2019" class="company__history-slide">
+											<p class="p">
+												В Волхове компания приступила к реализации проекта по
+												строительству нового производства фосфорсодержащих удобрений и
+												энергоустановки на базе Волховского филиала АО «Апатит». Объем
+												инвестиций в проект оценивается на уровне 23 млрд рублей, срок
+												реализации – 2023 г. Ввод в эксплуатацию нового завода позволит
+												увеличить переработку апатитового концентрата внутри Группы
+												«ФосАгро» на 1 млн тонн в год и нарастить выпуск
+												фосфорсодержащих удобрений, обладающих высокой доходностью в
+												условиях логистических преимуществ Волховского филиала АО
+												«Апатит». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/193/193966f1a46e2f061b987e90b2892798.png" data-year="2019"
+											class="company__history-slide">
+											<p class="p">
+												Совет директоров ПАО «ФосАгро» утвердил Стратегию развития
+												компании до 2025 года. Она нацелена на дальнейшее расширение
+												присутствия компании на приоритетном российском и премиальных
+												экспортных рынках, укрепление позиций в качестве производителя
+												экологически безопасных фосфорсодержащих удобрений с одними из
+												самых низких в отрасли затратами. Успешная реализация новой
+												стратегии позволит компании стабильно наращивать возможности по
+												обеспечению сельхозпроизводителей по всему миру уникальными
+												удобрениями ФосАгро, отличающимися высоким качеством и
+												экологической чистотой.</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="img/history-photo.jpg" data-year="2018" class="company__history-slide">
+											<p class="p">
+												Генеральный директор ПАО «ФосАгро», президент Российской
+												ассоциации производителей удобрений Андрей Гурьев награжден
+												медалью ордена «За заслуги перед Отечеством» II степени. Высокой
+												государственной наградой он отмечен за достигнутые трудовые
+												успехи, активную общественную деятельность и многолетнюю
+												добросовестную работу. Соответствующий указ №513 подписан
+												Президентом России Владимиром Путиным 10 сентября 2018 года.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												Патриарх Московский и всея Руси Кирилл в рамках
+												Первосвятительского визита в Череповецкую Епархию возглавил чин
+												освящения закладного камня в основание храма в честь святой
+												великомученицы Екатерины на череповецком производственном
+												комплексе ФосАгро. Святейший Патриарх посетил производственные и
+												социальные объекты предприятия, после чего у храма святой
+												великомученицы Варвары обратился с пастырским словом к
+												прихожанам и работникам компании.&nbsp;&nbsp; </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро выбрана Продовольственной и сельскохозяйственной
+												организацией Объединенных Наций (ФАО) для реализации глобальной
+												инициативы в области защиты почв. Компания стала первой за всю
+												историю ФАО корпорацией из России, на которую возложена такая
+												задача. Проект сыграет важную роль в налаживании единого
+												мирового научно-информационного механизма продвижения технологий
+												и знаний в области устойчивого землепользования и земледелия.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро второй раз подряд возглавила рейтинг производителей
+												минеральных удобрений в СНГ, составленного отраслевым порталом
+												Fertilizer Daily по итогам 2018 года. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												Офис ФосАгро начало свою работу в Аргентине (г. Буэнос-Айрес).
+												Это уже второй офис ФосАгро в Латинской Америке: первый был
+												открыт несколько лет назад в Бразилии (г. Сан-Паулу). </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро открыла региональный офис на Дальнем Востоке (г.
+												Владивосток). В перспективе он возьмет на себя организацию
+												накоплений минеральных удобрений в регионе для подготовки к
+												сезону полевых работ, в том числе, через развитие региональной
+												инфраструктуры. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро, Российский фонд прямых инвестиций (РФПИ) и крупнейший
+												импортер минеральных удобрений в Индии Indian Potash Limited
+												(IPL) сегодня в Нью-Дели подписали Соглашение о сотрудничестве в
+												секторе минеральных удобрений. В рамках взаимовыгодного
+												сотрудничества IPL выразила намерение приобрести для индийского
+												рынка до 2 млн тонн высококачественных минеральных удобрений,
+												производимых ФосАгро - DAP, NPK с различным содержанием
+												питательных веществ, в 2019-2021 гг. Совокупная стоимость
+												поставок была оценена на уровне $1 млрд.&nbsp;&nbsp;<br> <br>
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												Заместитель председателя совета директоров ПАО «ФосАгро» Андрей
+												Г. Гурьев награжден орденом «За заслуги перед Отечеством» IV
+												степени. Этой высокой награды он удостоен за большой вклад в
+												реализацию социально значимых проектов, активную
+												благотворительную и общественную деятельность. Соответствующий
+												Указ Президента России был подписан 24 января 2018 г. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												Генеральный директор ПАО «ФосАгро» Андрей Гурьев в очередной раз
+												возглавил совместный рейтинг «КоммерсантЪ» и Ассоциации
+												менеджеров «ТОП-1000 российских менеджеров» в номинации
+												«Химическая отрасль». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/fa8/fa800fcedc337b0eb566ec7c06fefd1a.png" data-year="2018"
+											class="company__history-slide">
+											<p class="p">
+												Генеральный директор ПАО «ФосАгро» Андрей Гурьев признан лучшим
+												генеральным директором в химическом секторе в первом рейтинге
+												руководителей компаний из развивающихся стран региона ЕМЕА
+												(Европа, Ближний Восток и Африка) в 2018 г., составленном
+												международным журналом Institutional Investor. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» стала лидером рейтинга газеты «Ведомости» по
+												темпам роста производительности труда за последние 5 лет.
+												Исследование по производительности труда (годовой выработке в
+												денежном выражении на одного сотрудника) коснулось 55 крупнейших
+												по выручке российских компаний на основе консолидированной
+												отчетности по МСФО. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» завоевала Гран-при всероссийского конкурса
+												«Лидеры российского бизнеса: динамика и ответственность-2016».
+												Награждение победителей Конкурса прошло сегодня, 16 марта 2017
+												г., во время работы съезда РСПП в рамках Недели российского
+												бизнеса, в котором принял участие Президент России Владимир
+												Путин. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												«ФосАгро» перерегистрировала АО «Апатит» в г. Череповце
+												Вологодской области. Ранее предприятие было зарегистрировано в
+												г. Кировске Мурманской области, где теперь создан Кировский
+												филиала АО «Апатит». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												В рамках мероприятий, реализуемых в Год экологии в России, в
+												череповецком химическом кластере ФосАгро запущены в промышленную
+												эксплуатацию новые биолого-химические очистные сооружения.
+												Благодаря использованию современных технологий, сброс сточных
+												вод в водные объекты полностью исключен, а очищенные стоки
+												возвращаются в производственный цикл. Новые очистные сооружения
+												полностью соответствуют требованиям наилучших доступных
+												технологий. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												Введен в промышленную эксплуатацию новый производственный
+												комплекс, который включает в себя третье высокотехнологичное
+												производство аммиака мощностью 760 тысяч тонн в год и
+												производство гранулированного карбамида мощностью 500 тысяч тонн
+												год. Это позволило увеличить объемы производства минеральных
+												удобрений, расширить рынки сбыта предприятия и сократить объем
+												закупок привозного сырья. Общий объем инвестиций в этот проект
+												превысил 65 млрд рублей. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												Генеральный директор ПАО «ФосАгро» Андрей Гурьев вновь признан
+												лучшим управленцем в химической отрасли, победив в
+												соответствующей номинации совместного рейтинга ИД «КоммерсантЪ»
+												и Ассоциации менеджеров России «ТОП-1000 российских менеджеров».
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/475/475b29935627b2825088a4d1047673bd.png" data-year="2017"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро вошла в первый в истории американского Forbes рейтинг
+												лучших работодателей в мире, заняв в нем 468-е место и став
+												одной из четырех российских компаний, попавших в ТОП-500.
+												Рейтинг World’s Best Employers был сформирован на основе списка
+												крупнейших публичных компаний мира - Forbes Global 2000,
+												ежегодно составляемого журналом. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												Генеральный директор ПАО «ФосАгро» Андрей Гурьев возглавил
+												совместный рейтинг «КоммерсантЪ» и Ассоциации менеджеров
+												«ТОП-1000 российских менеджеров» в номинации «Химическая
+												отрасль». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро стала лауреатом Всероссийского конкурса РСПП «Лидеры
+												российского бизнеса: динамика и ответственность» в номинации «За
+												динамичное развитие бизнеса». Конкурс проводится Российским
+												союзом промышленников и предпринимателей (РСПП) на ежегодной
+												основе, начиная с 1997 года. Приз за победу в номинации «За
+												динамичное развитие бизнеса» в 2016 году вручался впервые. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												MSCI включила глобальные депозитарные расписки (ГДР) на акции
+												ФосАгро в индексы MSCI Russia и MSCI Emerging Markets. ФосАгро
+												стала первой компанией, которая была добавлена в индекс MSCI
+												Russia за последние два года. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												Генеральный директор ПАО «ФосАгро» Андрей Гурьев вступил в
+												должность Президента РАПУ и переизбран вице-президентом IFA по
+												Восточной Европе и Центральной Азии. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро и НЦССХ им. А.Н. Бакулева заключили договор о поддержке
+												высокотехнологичной медицинской помощи. Речь идет о проведении
+												экстренных операций детям, которые остро нуждаются в помощи, но
+												при этом не имеют бюджетной квоты на ее оказание. Помимо этого,
+												в рамках соглашения специалисты Бакулевского центра проводят
+												диспансерное обследование сотрудников компании и жителей городов
+												присутствия ФосАгро. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												Компания «ФосАгро» изменила наименование организационно-правовой
+												формы с ОАО на ПАО. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/cd7/cd71cc58778407ac72dce39314903450.png" data-year="2016"
+											class="company__history-slide">
+											<p class="p">
+												Патриарх Московский и Всея Руси Кирилл возглавил чин освящения
+												закладного камня в основание храма в честь Святой Великомученицы
+												Варвары в Кировске и вручил компании «ФосАгро» орден Святого
+												Благоверного князя Даниила Московского I степени. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/d43/d4356dc4ca7ba1b2bed258641651d50f.png" data-year="2015"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро привлекла долгосрочный кредит у UniCredit Bank Czech
+												Republic and Slovakia, A.S. на 73.4 млн евро на строительство
+												производства карбамида в Вологодской области. Кредит выдан
+												сроком на 12 лет под страховое покрытие чешской государственной
+												страховой компании EGAP. Компания в условиях ограниченного
+												доступа к долгосрочному финансированию в очередной раз
+												подтвердила свой статус первоклассного заемщика. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/d43/d4356dc4ca7ba1b2bed258641651d50f.png" data-year="2015"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро и австралийская корпорация Orica, занимающаяся
+												производством взрывчатых материалов, подписали договор сроком на
+												10 лет на производство буровзрывных работ в карьерах АО «Апатит»
+												и соглашение о поставке эмульсионных взрывчатых веществ для
+												подземных горных работ. Сумма контракта на буровзрывные работы
+												составила 12.5 млрд. рублей (без НДС). </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f95/f9557868e676e57c3c9ab780c97df6e6.png" data-year="2014"
+											class="company__history-slide">
+											<p class="p">
+												Проведена реорганизация 100%-ных дочерних компаний ФосАгро путем
+												присоединения ЗАО «Агро-Череповец», ЗАО «ФосАгро АГ» и ЗАО
+												«Нордик Рус Холдинг» к АО «ФосАгро-Череповец». Все права и
+												обязанности реорганизованных предприятий перешли к АО
+												«ФосАгро-Череповец». Цель – достижение еще более высоких
+												показателей эффективности деятельности предприятий ФосАгро путем
+												устранения дублирующих функций, а также укрепления преимуществ,
+												которые дает вертикально-интегрированная модель ведения бизнеса.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f95/f9557868e676e57c3c9ab780c97df6e6.png" data-year="2014"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» подписала прямое кредитное соглашение с
+												Японским Банком Международного Сотрудничества (JBIC) на общую
+												сумму $440.6 млн под гарантии Японского агентства страхования
+												экспорта и инвестиций (NEXI). Привлеченные средства были
+												использованы для финансирования строительства нового
+												высокотехнологичного агрегата аммиака мощностью 760 тысяч тонн в
+												год в Вологодской области. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f95/f9557868e676e57c3c9ab780c97df6e6.png" data-year="2014"
+											class="company__history-slide">
+											<p class="p">
+												Завершилась реорганизация двух дочерних обществ путем
+												присоединения ЗАО «Балаковские минеральные удобрения» к ОАО
+												«Апатит». Присоединение позволило оптимизировать управленческие
+												процессы и исключить дублирование ряда административных функций,
+												повысить эффективность снабжения за счет централизации и
+												укрупнения заявок на поставку товаров и услуг. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f95/f9557868e676e57c3c9ab780c97df6e6.png" data-year="2014"
+											class="company__history-slide">
+											<p class="p">
+												Завершилась реорганизация двух дочерних обществ путем
+												присоединения ЗАО «Балаковские минеральные удобрения» к ОАО
+												«Апатит». Присоединение позволило оптимизировать управленческие
+												процессы и исключить дублирование ряда административных функций,
+												повысить эффективность снабжения за счет централизации и
+												укрупнения заявок на поставку товаров и услуг. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f95/f9557868e676e57c3c9ab780c97df6e6.png" data-year="2014"
+											class="company__history-slide">
+											<p class="p">
+												Молодым ученым из разных стран мира вручены первые гранты,
+												учрежденные ЮНЕСКО, Международным союзом теоретической и
+												прикладной химии (IUPAC) и ФосАгро в рамках проекта «Зеленая
+												Химия для Жизни» за исследования в области защиты окружающей
+												среды и здоровья людей. Финансовую поддержку получили ученые,
+												работающие в области разработки и применения технологий,
+												основанных на принципах Зеленой химии для решения проблем охраны
+												окружающей среды, здравоохранения, обеспечения продовольствием.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/3b1/3b16b94b47ef63f023a4e9732aec19e4.png" data-year="2013"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» создала трейдера в Сингапуре для поставок
+												минеральных удобрений. Новый торгово-сбытовой офис позволил
+												заниматься маркетингом и продажей продукции ФосАгро по всему
+												спектру стран азиатского региона: от Пакистана до Японии,
+												включая Австралию и Азиатско-Тихоокеанский регион, а также в
+												странах Африки. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/3b1/3b16b94b47ef63f023a4e9732aec19e4.png" data-year="2013"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро успешно разместила дебютный выпуск пятилетних
+												еврооблигаций объемом $500 млн по ставке 4.204%
+												годовых.&nbsp;&nbsp; </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/3b1/3b16b94b47ef63f023a4e9732aec19e4.png" data-year="2013"
+											class="company__history-slide">
+											<p class="p">
+												Объем производства удобрений предприятиями Группы «ФосАгро» за
+												отчетный 2012 год увеличился на 8.6%, достигнув небывалого
+												уровня в 5.4 млн тонн, а общий объем их продаж вырос на 7.8% до
+												рекордных 5.3 млн тонн.&nbsp;&nbsp;По сравнению с аналогичным
+												периодом прошлого года объем продаж (без учета продаж внутри
+												Группы) фосфорсодержащих удобрений и кормовых фосфатов за 2012
+												год вырос на 4.5%, при этом их производство увеличилось на 5.7%.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/3b1/3b16b94b47ef63f023a4e9732aec19e4.png" data-year="2013"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро и международный консорциум во главе с японской
+												корпорацией Mitsubishi Heavy Industries Ltd заключили контракт
+												на строительство нового энергоэффективного агрегата аммиака в
+												Вологодской области. Строительство третьего агрегата аммиака
+												мощностью 2200 тонн в сутки (760 тысяч тонн в год) на площадке
+												ОАО «ФосАгро-Череповец» стало одним из ключевых проектов
+												долгосрочной модернизационной стратегии развития ПАО «ФосАгро».
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/3b1/3b16b94b47ef63f023a4e9732aec19e4.png" data-year="2013"
+											class="company__history-slide">
+											<p class="p">
+												ЮНЕСКО и ФосАгро подписали Соглашение о партнерстве и учреждении
+												программы грантов для поддержки перспективных проектов,
+												предложенных молодыми учеными в рамках совместного проекта
+												«Зеленая химия для жизни». Общий объем финансирования компанией
+												«ФосАгро» проекта «Зеленая химия для жизни», рассчитанного на
+												пять лет с возможностью дальнейшей пролонгации, составит $1.4
+												млн.&nbsp;&nbsp; </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/3b1/3b16b94b47ef63f023a4e9732aec19e4.png" data-year="2013"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро завершила консолидацию 100% акций ОАО «Апатит».
+												Консолидация ключевого добывающего актива явилась важным шагом
+												на пути реализации стратегии органического роста Группы
+												компаний. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро и бельгийская компания «Prayon» подписали меморандум о
+												сотрудничестве. Он предусматривал получение ФосАгро доступа к
+												технологии извлечения редкоземельных элементов, содержащихся в
+												фосфогипсе, образующемся при производстве фосфорной кислоты из
+												апатитового концентрата. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро выиграла тендер по продаже 26.67% обыкновенных акций ОАО
+												«Апатит» (около 20% от уставного капитала), находившихся в
+												федеральной собственности, предложив наивысшую из всех
+												участников цену в 11.11 млрд. рублей. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро запустила первое в современной российской истории новое
+												производство карбамида полного технологического цикла.
+												Производственно-энергетический комплекс объединил производство
+												карбамида мощностью 500 тысяч тонн в год и газотурбинную
+												электростанцию мощностью 32 МВт. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро завершила реорганизацию в форме слияния своих дочерних
+												компаний ОАО «Аммофос» и ОАО «Череповецкий «Азот».&nbsp;&nbsp;В
+												результате создано ОАО «ФосАгро-Череповец». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» и ОК РУСАЛ заключили соглашение о
+												сотрудничестве по поставкам фтористых солей на срок до 2034
+												года. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												ООО «Метахим» перешло под управление ЗАО «ФосАгро АГ». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/024/0243d54dec67c6fffab56a9efd811679.png" data-year="2012"
+											class="company__history-slide">
+											<p class="p">
+												В Группе «ФосАгро» создан проектный центр «ГорноХимический
+												инжиниринг». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/1b0/1b0e22f935df126edb7e8cc5990f436b.png" data-year="2011"
+											class="company__history-slide">
+											<p class="p">
+												Горнолыжный комплекс «Большой Вудъявр», созданный при поддержке
+												Группы «ФосАгро», признан лучшим сноуборд-парком и лучшим
+												курортом России. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/1b0/1b0e22f935df126edb7e8cc5990f436b.png" data-year="2011"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро провела первичное размещение акций (IPO) на Лондонской
+												фондовой бирже (LSE). Объем привлеченных средств составил $565
+												млн. (в т.ч. за счет реализации опциона на доразмещение). С
+												этого момента акции ОАО «ФосАгро» торгуются на Московской бирже,
+												а глобальные депозитарные расписки допущены к торгам на LSE.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/1b0/1b0e22f935df126edb7e8cc5990f436b.png" data-year="2011"
+											class="company__history-slide">
+											<p class="p">
+												В рамках реализации стратегии вертикальной интеграции Группой
+												«ФосАгро» приобретено 24% акций ЗАО «Метахим» и 21% акций ЗАО
+												«Пикалевская сода». ФосАгро, Санкт-Петербургский государственный
+												горный университет и датская компания FLSmidth подписали
+												соглашение о технологическом и проектном сотрудничестве по
+												модернизации Пикалевского производственного комплекса. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/1b0/1b0e22f935df126edb7e8cc5990f436b.png" data-year="2011"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро и Сбербанк России заключили соглашение о сотрудничестве.
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0b7/0b74b927000ffbd4fe98ddc8068d2845.png" data-year="2010"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро ввела в эксплуатацию новую сернокислотную установку
+												СК-650 и турбогенератор мощностью 25 МВт на «Балаковских
+												минеральных удобрениях». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0b7/0b74b927000ffbd4fe98ddc8068d2845.png" data-year="2010"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро заключила трехлетний контракт на поставку в Индию
+												диаммонийфосфата (DAP) общей стоимостью $1.5 млрд., а также
+												стала первой в мире компанией, подписавшей годовой контракт с
+												Индией на поставку комплексных минеральных удобрений (NPK). </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0b7/0b74b927000ffbd4fe98ddc8068d2845.png" data-year="2010"
+											class="company__history-slide">
+											<p class="p">
+												Завершены основные этапы реализации программ технического
+												перевооружения в ОАО «Аммофос» и ООО «Балаковские минеральные
+												удобрения». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0b7/0b74b927000ffbd4fe98ddc8068d2845.png" data-year="2010"
+											class="company__history-slide">
+											<p class="p">
+												ООО «Балаковские минеральные удобрения» стало первым
+												предприятием в России, получившим европейский сертификат
+												качества GMP+ на выпускаемую продукцию. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0b7/0b74b927000ffbd4fe98ddc8068d2845.png" data-year="2010"
+											class="company__history-slide">
+											<p class="p">
+												Группа «ФосАгро» начала в Череповце строительство нового
+												производства карбамида и ГТЭС. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f02/f025d06b5825e152625da030be274a0e.png" data-year="2009"
+											class="company__history-slide">
+											<p class="p">
+												ОАО «Аммофос», запустившее четвертую производственную линию,
+												стало крупнейшим производителем серной кислоты в Европе. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/a6e/a6e346c04f9813c735cbf2f63f2d3b9a.png" data-year="2008"
+											class="company__history-slide">
+											<p class="p">
+												В ОАО «Апатит» запущена в промышленную эксплуатацию
+												корпоративная информационная система на базе Oracle®Е-Business
+												Suite — крупнейший в отрасли проект в России. В 2010 году к
+												системе подключены одновременно два предприятия — ОАО «Аммофос»
+												и ОАО «Череповецкий «Азот», в 2011 году – ООО «Балаковские
+												минеральные удобрения». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/a6e/a6e346c04f9813c735cbf2f63f2d3b9a.png" data-year="2008"
+											class="company__history-slide">
+											<p class="p">
+												В Группу «ФосАгро» вошла компания ООО ПК «Агро-Череповец»
+												(производство карбамида).&nbsp;&nbsp; </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/a6e/a6e346c04f9813c735cbf2f63f2d3b9a.png" data-year="2008"
+											class="company__history-slide">
+											<p class="p">
+												Запущена вторая линия по производству кормового
+												монокальцийфосфата в ООО «Балаковские минеральные удобрения».
+											</p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/b6d/b6d969a96854d4c37f56cbbd8efc86f8.png" data-year="2007"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро стала одним из инициаторов введения биржевой торговли
+												минеральными удобрениями в России, реализовав в 2007 году через
+												Московскую фондовую биржу 254 тысяч тонн удобрений и заключив
+												контракты на поставку в 2008 году более 500 тысяч тонн. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/b6d/b6d969a96854d4c37f56cbbd8efc86f8.png" data-year="2007"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро приступила к регистрации своей продукции согласно
+												требованиям европейского регламента по регистрации, оценке и
+												авторизации химических веществ (REACH). </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f2c/f2c67a5983c89fd25bb1541cd17e63da.png" data-year="2006"
+											class="company__history-slide">
+											<p class="p">
+												ОАО «Воскресенские минеральные удобрения» вышло из состава
+												Группы «ФосАгро». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/f2c/f2c67a5983c89fd25bb1541cd17e63da.png" data-year="2006"
+											class="company__history-slide">
+											<p class="p">
+												В ООО «Балаковские минеральные удобрения» запущена программа по
+												техническому перевооружению производственных мощностей,
+												направленная на увеличение объемов выпуска продукции и
+												расширение ее ассортимента.&nbsp;&nbsp; </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/6f8/6f8b362f6ca2afa4428f91bd84de8814.png" data-year="2005"
+											class="company__history-slide">
+											<p class="p">
+												Компания «ФосАгро» через собственную сбытовую сеть ООО
+												«ФосАгро-Регион» поставила 1 миллион тонн минеральных удобрений
+												потребителям в России и стран СНГ, что обеспечило компании
+												безусловное лидерство на рынке. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/6f8/6f8b362f6ca2afa4428f91bd84de8814.png" data-year="2005"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро через собственную сбытовую сеть ООО «ФосАгро-Регион»
+												поставила 1 млн тонн минеральных удобрений потребителям в России
+												и странах СНГ, что обеспечило компании безусловное лидерство на
+												рынке. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0bb/0bb525449e977217eef094f87f823763.png" data-year="2004"
+											class="company__history-slide">
+											<p class="p">
+												Разработана и принята Первая программа повышения
+												энергоэффективности предприятий Группы «ФосАгро». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0bb/0bb525449e977217eef094f87f823763.png" data-year="2004"
+											class="company__history-slide">
+											<p class="p">
+												ФосАгро начала формировать отчетность в соответствии с
+												международными стандартами. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/0bb/0bb525449e977217eef094f87f823763.png" data-year="2004"
+											class="company__history-slide">
+											<p class="p">
+												В рамках укрепления вертикальной интеграции в Группу «ФосАгро»
+												вошло ОАО «Череповецкий «Азот», связанное единой технологической
+												цепочкой с ОАО «Аммофос». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/553/553c53f9b15ec15d756d384a370ccb8b.png"
+											data-year="2001-&lt;br&gt;2003" class="company__history-slide">
+											<p class="p">
+												В ОАО «Аммофос» началась реализация программы модернизации,
+												направленная на создание гибких производственных линий,
+												позволяющих оперативно переключаться с производства одного вида
+												удобрений на другие в зависимости от рыночного спроса,
+												увеличение объема выпуска фосфорсодержащих удобрений и повышение
+												энергетической безопасности предприятия. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/553/553c53f9b15ec15d756d384a370ccb8b.png"
+											data-year="2001-&lt;br&gt;2003" class="company__history-slide">
+											<p class="p">
+												Созданы холдинговая компания ОАО «ФосАгро» и управляющая
+												компания ЗАO «ФосАгро АГ», взявшая на себя функции по управлению
+												производственно-хозяйственной деятельностью и развитию
+												приобретенных холдингом ОАО «Апатит», ОАО «Воскресенские
+												минеральные удобрения», ООО «Балаковские минеральные удобрения».
+												В состав холдинга вошел также Научно-исследовательский институт
+												по удобрениям и инсектофунгицидам (НИУИФ), специализирующийся на
+												научно-прикладных разработках в области минеральных удобрений,
+												солей и кислот. </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/553/553c53f9b15ec15d756d384a370ccb8b.png"
+											data-year="2001-&lt;br&gt;2003" class="company__history-slide">
+											<p class="p">
+												ОАО «ФосАгро» стало генеральным партнером НП «Дети России
+												образованны и здоровы – ДРОЗД». </p>
+										</div>
+									</div>
+									<div class="owl-item" style="width: auto; margin-right: 80px;">
+										<div data-img="/upload/iblock/553/553c53f9b15ec15d756d384a370ccb8b.png"
+											data-year="2001-&lt;br&gt;2003" class="company__history-slide">
+											<p class="p">
+												Создана транспортно-логистическая компания ООО «ФосАгро Транс»,
+												с апреля 2003 года находится под управлением ЗАО «ФосАгро АГ». К
+												Группе присоединилось ОАО «Аммофос» - один из самых передовых и
+												мощных в России производителей фосфорсодержащих
+												удобрений.&nbsp;&nbsp; </p>
+										</div>
+									</div>
 								</div>
 							</div>
-							<div class="swiper-slide">
-								<div class="history__item">
-									bla bla
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="history__item">
-									bla bla
-								</div>
-							</div>
-							<div class="swiper-slide">
-								<div class="history__item">
-									bla bla
-								</div>
+							<div class="owl-nav disabled"><button type="button" role="presentation" class="owl-prev"><span
+										aria-label="Previous">‹</span></button><button type="button" role="presentation"
+									class="owl-next"><span aria-label="Next">›</span></button></div>
+							<div class="owl-dots"><button role="button" class="owl-dot active"><span></span></button><button
+									role="button" class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button"
+									class="owl-dot"><span></span></button><button role="button" class="owl-dot"><span></span></button>
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="history__control">
-				<input type="text" class="range-slider" name="my_range" value="" />
-				<!-- <div class="line">
-					<div class="cursor"></div>
-				</div> -->
-				<!-- <div class="item">
-					<div class="dot"></div>
-					<div class="year">2021</div>
-				</div>
-				<div class="item">
-					<div class="dot"></div>
-					<div class="year">2022</div>
-				</div>
-				<div class="item">
-					<div class="dot"></div>
-					<div class="year">2023</div>
-				</div> -->
-			</div>
 		</div>
+		<div class="company__history-slider-controls">
+			<div class="company__history-slider-controls-line"></div>
+			<div class="container">
+				<div class="company__history-slider-controls-dots js-company-history-dots" style="transform: translateX(0px);">
+					<div class="company__history-slider-controls-dragger js-company-history-dragger"
+						style="touch-action: none; user-select: none; -webkit-user-drag: none; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); left: 0px;">
+						<div class="company__history-slider-controls-dragger-before"></div>
+						<div class="company__history-slider-controls-dragger-dot"></div>
+					</div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2019</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2018</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2017</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2016</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2015</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2014</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2013</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2012</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2011</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2010</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2009</span>
+					</div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2008</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2007</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2006</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2005</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2004</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div
+						class="company__history-slider-controls-dot company__history-slider-controls-dot--with-year js-company-history-dot">
+						<span class="company__history-slider-controls-dot-year">2001-<br>2003</span>
+					</div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+					<div class="company__history-slider-controls-dot js-company-history-dot"></div>
+				</div>
+			</div>
+		</div> <a name="holding"></a>
 	</section>
-
-
 
 
 

@@ -28,13 +28,13 @@ $(document).ready(function () {
 					const start = offsetBlock - $(window).innerHeight() / 2;
 					const finish = offsetBlock + $(window).innerHeight() / 3;
 					const raznica = finish - start;
-					const index = 50 / raznica;
+					const index = 0.2 / raznica;
 
 					if (offsetScroll >= start && offsetScroll < finish) {
 
 						let value = offsetScroll - offsetBlock + $(window).innerHeight() / 2;
 						let ratio = 1;
-						image.css('background-position-x', `${75 - (value * index)}%`)
+						image.css('transform', `scale(${1 + (value * index)})`)
 					}
 				}
 
@@ -45,13 +45,13 @@ $(document).ready(function () {
 					const start = offsetBlock2 - $(window).innerHeight() / 2;
 					const finish = offsetBlock2 + $(window).innerHeight() / 3;
 					const raznica = finish - start;
-					const index = 50 / raznica;
+					const index = 0.2 / raznica;
 
 					if (offsetScroll >= start && offsetScroll < finish) {
 
 						let value = offsetScroll - offsetBlock2 + $(window).innerHeight() / 2;
 						let ratio = 1;
-						image2.css('background-position-x', `${50 - (value * index)}%`)
+						image2.css('transform', `scale(${1 + (value * index)})`)
 					}
 				}
 
@@ -82,11 +82,11 @@ $(document).ready(function () {
 			var y = event.offsetY - height;
 
 			roundBtn.css('transform', `translate(${x / 10}px, ${y / 10}px)`);
-			border1.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-			border2.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-			border3.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-			border4.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
-			border5.css('transform', `translate(${x / 3}px, ${y / 3}px)`);
+			border1.css('transform', `translate(${x / 2}px, ${y / 2}px)`);
+			border2.css('transform', `translate(${x / 2}px, ${y / 2}px)`);
+			border3.css('transform', `translate(${x / 2}px, ${y / 2}px)`);
+			border4.css('transform', `translate(${x / 2}px, ${y / 2}px)`);
+			border5.css('transform', `translate(${x / 2}px, ${y / 2}px)`);
 		});
 
 		round.mouseleave(function () {
@@ -97,114 +97,50 @@ $(document).ready(function () {
 			border4.css('transform', 'translate(0px, 0px)');
 			border5.css('transform', 'translate(0px, 0px)');
 		})
+
+		if (document.querySelector('.decor-waves')) {
+			const tl_1 = new TimelineMax({ repeat: -1 });
+			const tl_2 = new TimelineMax({ repeat: -1 });
+			const tl_3 = new TimelineMax({ repeat: -1 });
+			const tl_4 = new TimelineMax({ repeat: -1 });
+
+			tl_1.to(".start-1", 7, { morphSVG: ".second-1", shapeIndex: 7, ease: 'linear' })
+			// .to(".start-1", 11, { morphSVG: ".second-4", shapeIndex: 7, ease: 'linear' });
+
+			tl_2.to(".start-2", 7, { morphSVG: ".second-2", shapeIndex: 3, ease: 'linear' })
+			// .to(".start-2", 9, { morphSVG: ".second-1", shapeIndex: 1, ease: 'linear' });
+
+			tl_3.to(".start-3", 7, { morphSVG: ".second-3", ease: 'linear' })
+			// .to(".start-3", 7, { morphSVG: ".second-2", ease: 'linear' });
+
+			tl_4.to(".start-4", 7, { morphSVG: ".second-4", ease: 'linear' })
+			// .to(".start-4", 4, { morphSVG: ".second-3", ease: 'linear' });
+
+		}
 	}
 
+	const burger = $('.burger');
+	const mobMenu = $('.mob-menu');
+	let menuItemDelay = 0.75;
 
-
-
-	// TweenMax.registerPlugin(MorphSVGPlugin);
-
-	// if (document.querySelector('.decor-waves')) {
-	// 	const tl_1 = new TimelineMax({ repeat: -1 });
-	// 	const tl_2 = new TimelineMax({ repeat: -1 });
-	// 	const tl_3 = new TimelineMax({ repeat: -1 });
-	// 	const tl_4 = new TimelineMax({ repeat: -1 });
-
-	// 	tl_1.to(".start-1", 7, { morphSVG: ".second-1", shapeIndex: 7, ease: 'linear' })
-	// 	// .to(".start-1", 11, { morphSVG: ".second-4", shapeIndex: 7, ease: 'linear' });
-
-	// 	tl_2.to(".start-2", 7, { morphSVG: ".second-2", shapeIndex: 3, ease: 'linear' })
-	// 	// .to(".start-2", 9, { morphSVG: ".second-1", shapeIndex: 1, ease: 'linear' });
-
-	// 	tl_3.to(".start-3", 7, { morphSVG: ".second-3", ease: 'linear' })
-	// 	// .to(".start-3", 7, { morphSVG: ".second-2", ease: 'linear' });
-
-	// 	tl_4.to(".start-4", 7, { morphSVG: ".second-4", ease: 'linear' })
-	// 	// .to(".start-4", 4, { morphSVG: ".second-3", ease: 'linear' });
-
-	// }
-
-
-
-
-
-	$('.burger').click(function () {
-		$(this).toggleClass('active')
+	$('.mob-menu__nav li').each(function (i, el) {
+		menuItemDelay += 0.03;
+		$(el).css('transition-delay', `${menuItemDelay}s`)
 	})
 
 
-	// $('.item-cat').hover(
-	// 	function () {
-	// 		$('.item-cat__text').css('transform', 'translateY(0)')
-	// 	},
-	// 	function () {
-	// 		$('.item-cat__text').css('transform', 'translateY(55px)')
-	// 	}
-	// )
-
-
-
-
-
-
-
-
-
-	let my_range
-
-
-
-	// Swiper
-	const slider_pag = new Swiper('.history__slider', {
-		slidesPerView: 1,
-		spaceBetween: 45,
-		on: {
-			slideChange: function () {
-				if (my_range.old_from != this.activeIndex) {
-					my_range.update({
-						from: this.activeIndex
-					})
-				}
-			},
+	$('.irs-grid-text').each(function (id, el) {
+		if ($(el).text() === '0') {
+			$(el).css({
+				'opacity': '0',
+				'visibility': 'hidden'
+			});
+			$(el).prev('.irs-grid-pol').css('transform', 'scale(0.7)')
 		}
-	});
 
-	$(".range-slider").ionRangeSlider({
-		skin: "round",
-		grid: true,
-		grid_snap: true,
-		from: 0,
-		values: ['2017', '2018', '2019', '2021', '', '2022', '2023', '2017', '2018', '2019', '2021', '', '2022', '2023', '2017', '2018', '2019', '2021', '', '2022', '2023'],
-		hide_min_max: true,
-		hide_from_to: true,
-		prettify_enabled: false,
-
-		onChange: function (data) {
-			slider_pag.slideTo(data.from);
-		},
-	});
-
-	my_range = $(".range-slider").data("ionRangeSlider");
+	})
 
 
-	// const cursor = $('.cursor');
-
-	// cursor.on('mousedown', function (ev) {
-	// 	let offset = cursor.offset().left
-
-	// 	$(document).on('mousemove', function (e) {
-	// 		let x = e.clientX;
-
-	// 		cursor.css('left', `(${ x - offset} px)`);
-	// 		// console.log(x)
-	// 	})
-
-	// 	$(document).on('mouseup', function (e) {
-	// 		$(document).off('mousemove')
-	// 		cursor.off('mouseup')
-	// 	})
-
-	// })
 
 	const slider_partners = new Swiper('.partners__slider', {
 		slidesPerView: 5,
@@ -243,11 +179,7 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-	// objectFitImages();
+	objectFitImages();
 
 	// Табы
 	// function tabs(buttonsList, wrapper, tabBlock) {
@@ -310,11 +242,11 @@ $(document).ready(function () {
 
 	// Fancy-box
 
-	// $('[data-src="#modal-polit"]').fancybox({
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-polit"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
 	// $('[data-src="#home-modal"]').fancybox({
 	// 	touch: 'false',
@@ -329,25 +261,29 @@ $(document).ready(function () {
 	// });
 
 	// Input-mask
-	// $('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
+	$('input[type="tel"]').inputmask({ "mask": "+7 (999)-999-99-99" });
 
 
 
 
 	// Menu-burger
-	// burger.click(function () {
-	// 	mobMenu.addClass('active')
-	// })
+	burger.click(function () {
+		let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
+		document.body.style.paddingRight = paddingOffset;
+		mobMenu.toggleClass('active')
+		$(this).toggleClass('active')
+		$(document.body).toggleClass('disable-scroll')
+		$(document).scrollTop(0)
+	})
 
-	// $('.mob-menu__close').click(function () {
-	// 	mobMenu.removeClass('active')
-	// })
-
-	// $(document).click(function (ev) {
-	// 	if (!ev.target.closest('.header__burger') && !ev.target.closest('h1')) {
-	// 		mobMenu.removeClass('active')
-	// 	}
-	// })
+	$(document).click(function (ev) {
+		if (!ev.target.closest('.burger') && !ev.target.closest('.mob-menu')) {
+			document.body.style.paddingRight = '0px';
+			mobMenu.removeClass('active')
+			burger.removeClass('active')
+			$(document.body).removeClass('disable-scroll')
+		}
+	})
 
 	// Яндекс карта
 	// ymaps.ready(function () {
@@ -395,7 +331,167 @@ $(document).ready(function () {
 	// });
 
 
+	function jsCompanyHistory() {
+		$(".js-company-history").each((function (e, n) {
+			var i = $(n),
+				r = i.find(".js-company-history-slider"),
+				o = i.find(".js-company-history-dot"),
+				a = i.find(".js-company-history-dots"),
+				s = i.find(".js-company-history-dragger"),
+				l = i.find(".js-company-history-info"),
+				c = $(".company__history-year"),
+				u = $(".company__history-figure-img"),
+				d = 0;
+			a.length > 0 && (d = a[0].scrollWidth, $(window).resize((function () {
+				d = a[0].scrollWidth
+			})));
+			var h = [];
+			o.each((function (t, e) {
+				h.push(e.offsetLeft)
+			})),
+				$(window).resize((function () {
+					h = [],
+						o.each((function (t, e) {
+							h.push(e.offsetLeft)
+						}))
+				})),
+				r.on("translated.owl.carousel", (function (t) {
+					var e = i.find(".active").first(),
+						n = e.index(),
+						r = e.find(".company__history-slide"),
+						o = parseInt(c.text()),
+						d = parseInt(r.data("year")),
+						f = r.data("year"),
+						p = r.data("img");
+					if (d > 0 && o !== d && (c.html(f), l.animate({
+						opacity: 0
+					}, 150), u.one("load", (function () {
+						l.animate({
+							opacity: 1
+						}, 150)
+					})), u.attr("src", p)), !g && !m) {
+						s.stop().animate({
+							left: h[n]
+						}, 150);
+						var v = h[n] < document.documentElement.clientWidth / 2 ? 0 : h[n] - document.documentElement.clientWidth / 2;
+						a.css({
+							transform: "translateX(".concat(-v, "px)")
+						})
+					}
+				})),
+				r.owlCarousel({
+					dots: !0,
+					loop: !1,
+					items: 1,
+					responsive: {
+						768: {
+							// autoWidth: !0,
+							// margin: 64
+						},
+						1392: {
+							// autoWidth: !0,
+							// margin: 120
+						}
+					}
+				});
+			var f = $(".js-history-slider-arrow-prev");
+			$(".js-history-slider-arrow-next").on("click", (function () {
+				var t = i.find(".active").first().index();
+				(t += 1) >= o.length && (t = o.length - 1),
+					r.trigger("to.owl.carousel", [t])
+			})),
+				f.on("click", (function () {
+					var t = i.find(".active").first().index();
+					(t -= 1) < 0 && (t = 0),
+						r.trigger("to.owl.carousel", [t])
+				})),
+				o.click((function (e) {
+					var n = $(e.currentTarget).index() - 1;
+					r.trigger("to.owl.carousel", [n])
+				}));
+			var p, g = !1,
+				m = !1;
+			if (s.length > 0) {
+				var v = new Hammer(s[0]),
+					y = 0;
+				v.add(new Hammer.Pan({
+					direction: Hammer.DIRECTION_ALL,
+					threshold: 0
+				})),
+					v.on("pan", (function (t) {
+						var e = s[0];
+						g || (g = !0, y = e.offsetLeft);
+						var n = t.deltaX + y;
+						if (n >= 0 && n <= d) {
+							var i = s.offset().left;
+							e.style.left = n + "px",
+								(i >= document.documentElement.clientWidth - 20 || i <= 20) && (p || (p = setInterval((function () {
+									!0,
+										i = s.offset().left;
+									var t = a.css("transform").split(/[()]/)[1],
+										n = t ? parseFloat(t.split(",")[4]) : 0;
+									if (i >= document.documentElement.clientWidth - 20) {
+										var r = e.offsetLeft + 16;
+										r <= d ? (y += 16, e.style.left = r + "px", a.css({
+											transform: "translateX(".concat(n - 16, "px)")
+										})) : r <= d + 16 && a.css({
+											transform: "translateX(".concat(n - 16, "px)")
+										})
+									} else if (i <= 20) {
+										var o = e.offsetLeft - 16;
+										o > 0 ? (y -= 16, e.style.left = o + "px", a.css({
+											transform: "translateX(".concat(n + 16, "px)")
+										})) : n < 16 && a.css({
+											transform: "translateX(".concat(n + 16, "px)")
+										})
+									} else !1,
+										clearInterval(p),
+										p = ""
+								}), 24)));
+							for (var o = 0, l = 0; l < h.length && n > h[l]; l++) o = l;
+							r.trigger("to.owl.carousel", [o])
+						}
+						if (t.isFinal) {
+							g = !1;
+							for (var c = 0, u = 0, f = 0; f < h.length; f++) {
+								if (!(n >= h[f])) {
+									u = f;
+									break
+								}
+								c = f
+							}
+							var v = Math.abs(n - h[c]),
+								_ = 0;
+							_ = Math.abs(n - h[u]) <= v ? u : c,
+								m = !0,
+								s.stop().animate({
+									left: h[_]
+								}, 150, (function () {
+									m = !1
+								})),
+								r.trigger("to.owl.carousel", [_]),
+								p && (!1, clearInterval(p), p = "")
+						}
+					})),
+					$(window).resize((function () {
+						y = 0,
+							s.css("left", 0),
+							a.css({
+								transform: "translateX(".concat(0, "px)")
+							}),
+							r.trigger("to.owl.carousel", [0])
+					}))
+			}
+		}))
+	}
 
 
-
+	jsCompanyHistory()
 });
+
+
+
+
+
+
+

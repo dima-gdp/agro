@@ -1,0 +1,137 @@
+.mob-menu {
+	position: fixed;
+	right: 0;
+	top: -110%;
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	// justify-content: flex-start;
+	z-index: 888;
+	background: #fff;
+	width: 100%;
+	padding: 50px 20px 40px 20px;
+	height: calc(100% - 58px);
+	overflow-y: auto;
+	overflow-x: hidden;
+	transition: 0.7s linear;
+	@media (min-width: 421px) {
+		// width: 320px;
+	}
+	@media (min-width: 640px) {
+		// width: 100%;
+		height: auto;
+		min-height: 180px;
+	}
+
+	&.active {
+		top: 58px;
+		@media (min-width: 421px) {
+			top: 68px;
+		}
+		@media (min-width: 501px) {
+			top: 78px;
+		}
+		@media (min-width: 769px) {
+			top: 101px;
+		}
+		.mob-menu__nav li {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	&__decor {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	// .mob-menu__container
+	&__container {
+		flex: 1 1 auto;
+		min-height: 100%;
+		// padding: 50px 20px 100px 20px;
+		display: flex;
+		flex-direction: column;
+	}
+	// .mob-menu__nav
+	&__nav {
+		flex: 1 1 auto;
+		margin-bottom: 40px;
+		@media (min-width: 640px) {
+			margin-bottom: 0;
+		}
+		ul {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			@media (min-width: 640px) {
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+			}
+			li {
+				transform: translateY(-100%);
+				transition-timing-function: ease-out;
+				opacity: 0;
+				transition-duration: 0.4s;
+				@media (min-width: 640px) {
+					margin-bottom: 15px;
+					transition-duration: 0.3s;
+				}
+				&:not(:last-child) {
+					margin-bottom: 15px;
+					@media (min-width: 640px) {
+						margin-right: 33px;
+					}
+				}
+
+				a {
+					font-weight: 400;
+					font-size: 18px;
+					line-height: 1.56;
+					color: #000000;
+					transition: 0.3s;
+				}
+
+				&.current-menu-item a {
+					color: $hover-green;
+				}
+			}
+		}
+	}
+	// .mob-menu__tel
+	&__tel {
+		margin-bottom: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 400;
+		font-size: 16px;
+		color: #000000;
+		transition: 0.3s;
+		svg {
+			margin-right: 7px;
+		}
+		@media (min-width: 640px) {
+			display: none;
+		}
+	}
+	// .mob-menu__social
+	&__social {
+		justify-content: center;
+		li {
+			&:not(:last-child) {
+				margin-right: 40px;
+			}
+		}
+		@media (min-width: 640px) {
+			display: none;
+		}
+	}
+}
+.current-menu-item {
+}
+.social {
+}

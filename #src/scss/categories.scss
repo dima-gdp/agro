@@ -171,7 +171,7 @@
 		position: absolute;
 		bottom: -3px;
 		right: 20px;
-		transition: 0.8s ease-in-out;
+		transition: 1s ease-in-out;
 		transform-origin: 0 100%;
 		transform: translate(-10%, 0) rotate(90deg);
 		pointer-events: none;
@@ -189,15 +189,15 @@
 	position: absolute;
 	top: 0;
 	left: 50%;
-	width: 62%;
-	padding-bottom: 62%;
+	width: 83%;
+	padding-bottom: 83%;
 	transform: translateX(-50%);
 	@media (max-width: 1200px) {
 		width: 100%;
 		padding-bottom: 100%;
 	}
 	&:hover {
-		img {
+		svg {
 			opacity: 1;
 		}
 		.round__btn {
@@ -251,7 +251,7 @@
 		border-radius: 100%;
 		border: 1px solid #c4c4c4;
 		pointer-events: none;
-		img {
+		svg {
 			opacity: 0;
 			position: absolute;
 			transition: 0.4s linear;
@@ -260,13 +260,13 @@
 			transition: 0.3s linear;
 		}
 		&--2 {
-			transition: 0.5s linear;
+			transition: 0.8s linear;
 		}
 		&--3 {
 			border: none;
 			z-index: 23;
 			transition: 0.3s linear;
-			img {
+			svg {
 				&:first-child {
 					top: 16%;
 					left: 16%;
@@ -281,7 +281,7 @@
 			border: none;
 			z-index: 23;
 			transition: 0.5s;
-			img {
+			svg {
 				&:first-child {
 					top: -4%;
 					left: 26%;
@@ -296,7 +296,7 @@
 			border: none;
 			z-index: 23;
 			transition: 0.7s linear;
-			img {
+			svg {
 				&:first-child {
 					top: 31%;
 					left: -4%;
