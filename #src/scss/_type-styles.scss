@@ -24,8 +24,8 @@
 		font-size: 18px;
 		line-height: 1.67;
 		font-weight: 300;
-		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 18, 15, 1200, 320);
+		@media (max-width: 1440px) {
+			@include adaptiv(font-size, 18, 15, 1440, 320);
 		}
 	}
 
@@ -35,8 +35,8 @@
 		font-size: 50px;
 		line-height: 1;
 		color: #000000;
-		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 50, 21, 1200, 320);
+		@media (max-width: 1440px) {
+			@include adaptiv(font-size, 50, 21, 1440, 320);
 		}
 	}
 	h2 {
@@ -44,8 +44,8 @@
 		font-size: 34px;
 		line-height: 1;
 		color: #000000;
-		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 34, 20, 1200, 320);
+		@media (max-width: 1440px) {
+			@include adaptiv(font-size, 34, 20, 1440, 320);
 		}
 	}
 
@@ -54,8 +54,8 @@
 		font-size: 24px;
 		line-height: 1.42;
 		color: #000000;
-		@media (max-width: 1200px) {
-			@include adaptiv(font-size, 24, 19, 1200, 320);
+		@media (max-width: 1440px) {
+			@include adaptiv(font-size, 24, 19, 1440, 320);
 		}
 	}
 
@@ -73,13 +73,13 @@
 			font-size: 18px;
 			line-height: 1.56;
 			color: #000000;
-			@media (max-width: 992px) {
-				@include adaptiv(font-size, 18, 15, 992, 320);
+			@media (max-width: 1440px) {
+				@include adaptiv(font-size, 18, 15, 1440, 320);
 			}
 			&:not(:last-child) {
 				margin-bottom: 20px;
-				@media (max-width: 992px) {
-					@include adaptiv(margin-bottom, 15, 7, 992, 320);
+				@media (max-width: 1440px) {
+					@include adaptiv(margin-bottom, 15, 7, 1440, 320);
 				}
 			}
 		}
@@ -122,6 +122,12 @@
 		width: 100%;
 		min-width: 420px;
 		font-size: 18px;
+		@media (max-width: 1440px) {
+			font-size: 17px;
+		}
+		@media (max-width: 1200px) {
+			font-size: 16px;
+		}
 		@media (max-width: 768px) {
 			font-size: 15px;
 		}

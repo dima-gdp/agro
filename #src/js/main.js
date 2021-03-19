@@ -248,11 +248,11 @@ $(document).ready(function () {
 		buttons: '',
 	});
 
-	// $('[data-src="#home-modal"]').fancybox({
-	// 	touch: 'false',
-	// 	smallBtn: false,
-	// 	buttons: '',
-	// });
+	$('[data-src="#modal-buy"]').fancybox({
+		touch: 'false',
+		smallBtn: false,
+		buttons: '',
+	});
 
 	// $('[data-fancybox="gal"]').fancybox({
 	// backFocus: false,
@@ -487,6 +487,8 @@ $(document).ready(function () {
 
 
 	jsCompanyHistory()
+
+	$('.js-company-history-dragger').css('left', '13px')
 });
 
 

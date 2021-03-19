@@ -148,7 +148,7 @@ function clean() {
 }
 
 const dev = gulp.series(clean, svg, svg_sprite, fonts, favicon, libs_css, images_dev, gulp.parallel(html, scss_dev, js_dev, watchingFiles, browserSync));
-const build = gulp.series(clean, svg, fonts, favicon, libs_css, images_build, gulp.parallel(html, scss_dev, js_dev));
+const build = gulp.series(clean, svg, svg_sprite, fonts, favicon, libs_css, images_build, gulp.parallel(html, scss_dev, js_dev));
 
 exports.favicon = favicon;
 exports.svg = svg;
