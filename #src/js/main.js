@@ -66,6 +66,7 @@ $(document).ready(function () {
 	};
 
 	if ($(window).innerWidth() >= 1201) {
+		console.log($(window).innerWidth())
 		const round = $('.round');
 		const roundBtn = $('.round__btn');
 		const border1 = $('.round__el--1');
@@ -116,6 +117,14 @@ $(document).ready(function () {
 			tl_4.to(".start-4", 7, { morphSVG: ".second-4", ease: 'linear' })
 			// .to(".start-4", 4, { morphSVG: ".second-3", ease: 'linear' });
 
+		}
+	}
+
+	if (document.querySelector('.decor-waves')) {
+		if ($(window).innerWidth() >= 1921) {
+			$('.decor-waves__svg').attr({
+				'preserveAspectRatio': 'none',
+			})
 		}
 	}
 

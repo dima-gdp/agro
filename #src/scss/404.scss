@@ -1,8 +1,14 @@
 .error {
 	padding-bottom: 167px;
+	@media (max-width: 1919px) {
+		@include adaptiv(padding-bottom, 167, 50, 1919, 320);
+	}
 	// .error__container
 	&__container {
 		margin-bottom: 140px;
+		@media (max-width: 1200px) {
+			margin-bottom: 0;
+		}
 	}
 	// .error__title
 	&__title {
@@ -11,6 +17,12 @@
 		font-size: 34px;
 		line-height: 1;
 		color: #000000;
+		@media (max-width: 1440px) {
+			@include adaptiv(font-size, 32, 22, 1440, 320);
+		}
+		@media (max-width: 768px) {
+			margin-bottom: 30px;
+		}
 	}
 	// .error__text
 	&__text {
@@ -19,6 +31,12 @@
 		font-size: 24px;
 		line-height: 1.42;
 		color: #000000;
+		@media (max-width: 1440px) {
+			@include adaptiv(font-size, 23, 18, 1440, 320);
+		}
+		@media (max-width: 576px) {
+			margin-bottom: 50px;
+		}
 		a {
 			color: #01873d;
 		}
@@ -69,6 +87,8 @@
 	}
 	.decor-waves {
 		height: 204px;
-		width: 100%;
+		@media (max-width: 1200px) {
+			display: none;
+		}
 	}
 }
