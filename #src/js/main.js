@@ -286,25 +286,28 @@ $(document).ready(function () {
 	})
 
 	// Яндекс карта
-	// ymaps.ready(function () {
-	// 	var myMap = new ymaps.Map(getMap, {
-	// 		center: [52.05693880953456, 118.68705543322154],
-	// 		zoom: 4
-	// 	});
+	if (document.querySelector('.contacts__map')) {
+		ymaps.ready(function () {
+			var myMap = new ymaps.Map('map', {
+				center: [52.05693880953456, 118.68705543322154],
+				zoom: 4
+			});
 
-	// 	var myPlacemark = new ymaps.Placemark([55.54055193739615, 108.71146949572154], {
-	// 		hintContent: 'г. Борисоглебск, ул. Победы, д. 66',
-	// 		balloonContent: 'г. Борисоглебск, ул. Победы, д. 66'
-	// 	},
-	// 		{
-	// 			preset: 'islands#redIcon',
-	// 			iconLayout: 'default#image',
-	// 			iconImageSize: [20, 28],
-	// 			iconImageOffset: [-19, -52]
-	// 		});
+			var myPlacemark = new ymaps.Placemark([55.54055193739615, 108.71146949572154], {
+				hintContent: 'г. Борисоглебск, ул. Победы, д. 66',
+				balloonContent: 'г. Борисоглебск, ул. Победы, д. 66'
+			},
+				{
+					preset: 'islands#redIcon',
+					iconLayout: 'default#image',
+					iconImageSize: [20, 28],
+					iconImageOffset: [-19, -52]
+				});
 
-	// 	myMap.geoObjects.add(myPlacemark);
-	// });
+			myMap.geoObjects.add(myPlacemark);
+		});
+	}
+
 
 
 	// Alertify
@@ -489,6 +492,7 @@ $(document).ready(function () {
 	jsCompanyHistory()
 
 	$('.js-company-history-dragger').css('left', '13px')
+
 });
 
 
