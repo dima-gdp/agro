@@ -197,4 +197,12 @@
 	img {
 		max-height: 700px;
 	}
+
+	a {
+		color: #000;
+		transition: 0.3s;
+		&:hover {
+			color: $hover-green;
+		}
+	}
 }
