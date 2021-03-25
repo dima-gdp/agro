@@ -7,6 +7,20 @@ $(document).ready(function () {
 		})
 	}
 
+	const asideOpen = $('.archive__aside-open');
+	const asideClose = $('.aside__close');
+	const aside = $('.aside');
+
+	asideOpen.click(function (ev) {
+		aside.addClass('aside--active')
+	})
+
+	asideClose.click(function (ev) {
+		aside.removeClass('aside--active')
+	})
+
+
+
 	window.onload = function () {
 		if ($(window).innerWidth() >= 1201) {
 			setTransformSubtitle()
@@ -291,6 +305,10 @@ $(document).ready(function () {
 			mobMenu.removeClass('active')
 			burger.removeClass('active')
 			$(document.body).removeClass('disable-scroll')
+		}
+
+		if (!ev.target.closest('.aside') && !ev.target.closest('.archive__aside-open')) {
+			aside.removeClass('aside--active')
 		}
 	})
 
