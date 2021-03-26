@@ -200,17 +200,73 @@ $(document).ready(function () {
 		}
 	});
 
+	const slider_with = new Swiper('.with__slider', {
+		slidesPerView: 4,
+		spaceBetween: 60,
+		// loop: true,
+		// autoplay: {
+		// 	delay: 4000,
+		// },
+		pagination: {
+			el: '.with__pagination',
+			type: 'bullets',
+			clickable: true
+		},
+		navigation: {
+			nextEl: '.partners__next',
+			prevEl: '.partners__prev',
+		},
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 20,
+			},
+			375: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			561: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			769: {
+				slidesPerView: 3,
+				spaceBetween: 40,
+			},
+			956: {
+				slidesPerView: 4,
+				spaceBetween: 40,
+			},
+			1300: {
+				slidesPerView: 4,
+				spaceBetween: 60,
+			},
+		}
+	});
+
 
 
 	objectFitImages();
 
 	// Табы
-	// function tabs(buttonsList, wrapper, tabBlock) {
-	// 	$(buttonsList).on('click', 'li:not(.active)', function () {
-	// 		$(this).addClass('active').siblings().removeClass('active')
-	// 			.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
-	// 	})
-	// }
+	function tabs(buttonsList, wrapper, tabBlock) {
+		$(buttonsList).on('click', 'li:not(.active)', function () {
+			$(this).addClass('active').siblings().removeClass('active')
+				.closest(wrapper).find(tabBlock).removeClass('active').eq($(this).index()).addClass('active');
+		})
+	}
+
+	tabs('.tabs-product__list', '.tabs-product', '.tabs-product__block')
+
+
+	$('.product__to-descr').click(function (ev) {
+		ev.preventDefault()
+		$('.descr-tab').addClass('active').siblings().removeClass('active')
+		$('.tabs-descr').addClass('active').siblings().removeClass('active')
+		$('html, body').animate({
+			scrollTop: $('.tabs-product').offset().top
+		}, 600);
+	});
 
 	// function toggleTabs(top, bottom, topActive) {
 	// 	$(top).on('click', function (ev) {
