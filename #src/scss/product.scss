@@ -206,16 +206,24 @@
 			font-size: 16px;
 			min-height: 50px;
 		}
+		@media (max-width: 420px) {
+			margin-right: 0;
+			margin-bottom: 20px;
+		}
 		&:hover {
 			background: $hover-green;
 		}
 	}
 	// .product__download
 	&__download {
-		display: flex;
-		align-items: center;
+		display: inline-block;
+		position: relative;
+		padding-left: 19px;
 		@media (max-width: 1278px) {
 			order: 0;
+		}
+		@media (max-width: 576px) {
+			padding-left: 12px;
 		}
 		span {
 			font-weight: 300;
@@ -230,6 +238,9 @@
 			}
 		}
 		svg {
+			position: absolute;
+			top: 0.3em;
+			left: 0;
 			path {
 				transition: 0.3s;
 			}
@@ -257,12 +268,15 @@
 	&__list {
 		display: flex;
 		flex-wrap: wrap;
-		margin: 0px -35px 68px -35px;
+		margin: 0px -35px 58px -35px;
 		@media (max-width: 1410px) {
-			margin: 0px -15px 68px -15px;
+			margin: 0px -15px 30px -15px;
 		}
 		@media (max-width: 500px) {
-			margin: 0px -10px 40px -10px;
+			margin: 0px -10px 20px -10px;
+		}
+		@media (max-width: 420px) {
+			margin: 0px -10px 10px -10px;
 		}
 		li {
 			margin: 0px 35px 10px 35px;
@@ -365,6 +379,51 @@
 			object-position: center;
 			font-family: "object-fit: cover; object-position: center;";
 		}
+
+		&.gal-product__more {
+			p {
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				font-weight: bold;
+				font-size: 24px;
+				line-height: 1.17;
+				text-align: center;
+				text-decoration-line: underline;
+				color: #ffffff;
+				z-index: 2;
+				@media (max-width: 1536px) {
+					@include adaptiv(font-size, 23, 16, 1536, 901);
+				}
+				@media (max-width: 900px) {
+					@include adaptiv(font-size, 23, 15, 900, 375);
+				}
+				@media (max-width: 374px) {
+					font-size: 18px;
+				}
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background: rgba(0, 0, 0, 0.5);
+				z-index: 1;
+			}
+			.icon {
+				display: none;
+			}
+		}
+		&--hide {
+			display: none;
+		}
 	}
 }
 
@@ -377,6 +436,24 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	@media (max-width: 1200px) {
+		width: 40px;
+		height: 40px;
+		bottom: 12px;
+		right: 12px;
+	}
+	@media (max-width: 1000px) {
+		width: 30px;
+		height: 30px;
+		right: 10px;
+		bottom: 10px;
+	}
+	@media (max-width: 900px) {
+		bottom: 20px;
+		right: 26px;
+		width: 52px;
+		height: 52px;
+	}
 	@media (max-width: 768px) {
 		width: 40px;
 		height: 40px;
@@ -389,4 +466,8 @@
 		bottom: 10px;
 		right: 10px;
 	}
+}
+
+.swiper-pagination-lock {
+	display: none !important;
 }

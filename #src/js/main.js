@@ -268,6 +268,7 @@ $(document).ready(function () {
 		}, 600);
 	});
 
+
 	// function toggleTabs(top, bottom, topActive) {
 	// 	$(top).on('click', function (ev) {
 	// 		let text = $(this).next(bottom);
