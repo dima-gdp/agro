@@ -1,0 +1,196 @@
+@@include('header.html')
+
+<main class="main">
+	@@include('breadcrumbs.html')
+	<div class="archive">
+		<div class="archive__container container">
+			<h1 class="archive__title title">Самоходная техника</h1>
+			<button class="archive__aside-open">Каталог <span class="archive__burger"><span></span></span></button>
+			<div class="archive__flex">
+				<aside class="archive__aside aside">
+					<button class="aside__close"></button>
+					<p class="aside__title title">Каталог</p>
+					<ul class="aside__list">
+						<li>
+							<a href="#" class="active">Самоходная техника</a>
+							<ul>
+								<li>
+									<a href="#">Тракторы</a>
+								</li>
+								<li>
+									<a href="#" class="active">Комбайны</a>
+								</li>
+								<li>
+									<a href="#">Дополнительное оборудование</a>
+									<ul>
+										<li>
+											<a href="#">Третьий уровень</a>
+										</li>
+										<li>
+											<a href="#">Третьий уровень</a>
+										</li>
+										<li>
+											<a href="#">Третьий уровень</a>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">Почвобработка</a>
+						</li>
+					</ul>
+				</aside>
+				<section class="archive__section section-archive">
+
+					<div class="section-archive__top">
+						<div class="section-archive__title">Если Вы решили продать или купить б\у технику или технику с наработкой,
+							то мы готовы предложить Вам нашу площадку.
+						</div>
+						<div class="section-archive__subtitle">Если Вы хотите продать технику с наработкой, заполните форму заявки и
+							мы разместим Вашу технику.
+						</div>
+					</div>
+
+					<div class="toggle-archive">
+						<div class="toggle-archive__top">
+							<button class="toggle-archive__open">Подать объявление</button>
+							<button class="toggle-archive__close"><span class="cross"></span><span>Свернуть форму</span></button>
+						</div>
+						<div class="toggle-archive__bot">
+							<div class="wpcf7">
+								<form class="wpcf7-form">
+									<div class="form-toggle">
+										<div class="form-toggle__col">
+											<span class="wpcf7-form-control-wrap">
+												<input type="text" class="wpcf7-form-control" placeholder="Имя">
+											</span>
+											<span class="wpcf7-form-control-wrap">
+												<input type="tel" class="wpcf7-form-control" placeholder="Контактный телефон">
+											</span>
+											<span class="wpcf7-form-control-wrap">
+												<input type="text" class="wpcf7-form-control" placeholder="Наименование техники">
+											</span>
+											<div class="form-toggle__flex">
+												<span class="wpcf7-form-control-wrap">
+													<input type="text" class="wpcf7-form-control" placeholder="Имя">
+												</span>
+												<span class="wpcf7-form-control-wrap">
+													<input type="text" class="wpcf7-form-control" placeholder="Имя">
+												</span>
+											</div>
+											<span class="wpcf7-form-control-wrap">
+												<input type="text" class="wpcf7-form-control" placeholder="Наименование техники">
+											</span>
+										</div>
+										<div class="form-toggle__col">
+											<span class="wpcf7-form-control-wrap">
+												<textarea class="wpcf7-form-control" placeholder="Описание"></textarea>
+											</span>
+											<span class="wpcf7-form-control-wrap photos">
+												<div class="codedropz-upload-wrapper"><input type="file" size="40"
+														class="wpcf7-form-control wpcf7-drag-n-drop-file d-none" aria-invalid="false"
+														multiple="multiple" data-name="photos" data-type="jpeg|jpg|png|svg|gif" data-max="10"
+														data-id="291" accept=".jpeg, .jpg, .png, .svg, .gif">
+													<div class="codedropz-upload-handler">
+														<div class="codedropz-upload-container">
+															<div class="codedropz-upload-inner">
+																<h3>Текст для поля Файл</h3><span>или</span>
+																<div class="codedropz-btn-wrap"><a class="cd-upload-btn"
+																		href="javascript:void(0)">Выбрать файл</a></div>
+															</div>
+														</div><span class="dnd-upload-counter"><span>0</span> из 10</span>
+													</div>
+												</div>
+											</span>
+										</div>
+									</div>
+									<div class="form-toggle__bot">
+										<input type="submit" value="Жду звонка" class="wpcf7-form-control wpcf7-submit">
+										<div class="form-toggle__privacy">Даю согласие на обработку моих персональных данных в соответствии
+											с
+											<span data-src="#modal-polit">политикой конфиденциальности сайта</span>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+
+					<div class="section-archive__bot">Если Вы хотите купить б\у технику, то предлоагаем ознакомиться с
+						предложениями ниже.</div>
+
+
+					<div class="section-archive__grid">
+						<div class="section-archive__column">
+							<a href="#" class="product-item">
+								<div class="product-item__image">
+									<img src="img/product-item-1.jpg" alt="">
+									<div class="product-item__btn">
+										Подробнее
+										@@include('svg/arrow-hero.svg')
+									</div>
+								</div>
+								<h2 class="product-item__title">Трактор Кировец К7-М</h2>
+								<div class="product-item__subtitle">4.80 мощностью 82 л. с.</div>
+							</a>
+						</div>
+						<div class="section-archive__column">
+							<a href="#" class="product-item">
+								<div class="product-item__image">
+									<img src="img/product-item-1.jpg" alt="">
+									<div class="product-item__btn">
+										Подробнее
+										@@include('svg/arrow-hero.svg')
+									</div>
+								</div>
+								<h2 class="product-item__title">Трактор Кировец К7-М</h2>
+								<div class="product-item__subtitle">4.80 мощностью 82 л. с.</div>
+							</a>
+						</div>
+						<div class="section-archive__column">
+							<a href="#" class="product-item">
+								<div class="product-item__image">
+									<img src="img/product-item-1.jpg" alt="">
+									<div class="product-item__btn">
+										Подробнее
+										@@include('svg/arrow-hero.svg')
+									</div>
+								</div>
+								<h2 class="product-item__title">Трактор Кировец К7-М</h2>
+								<div class="product-item__subtitle">4.80 мощностью 82 л. с.</div>
+							</a>
+						</div>
+						<div class="section-archive__column">
+							<a href="#" class="product-item">
+								<div class="product-item__image">
+									<img src="img/product-item-1.jpg" alt="">
+									<div class="product-item__btn">
+										Подробнее
+										@@include('svg/arrow-hero.svg')
+									</div>
+								</div>
+								<h2 class="product-item__title">Трактор Кировец К7-М</h2>
+								<div class="product-item__subtitle">4.80 мощностью 82 л. с.</div>
+							</a>
+						</div>
+					</div>
+					<div class="archive__pagination pagination">
+						<a class="prev page-numbers" href="#">&lt;<span>&nbsp;Предыдущая</span></a>
+						<a class="page-numbers" href="#">1</a>
+						<a class="page-numbers" href="#">2</a>
+						<span class="page-numbers dots">…</span>
+						<a class="page-numbers" href="#">44</a>
+						<span aria-current="page" class="page-numbers current">33</span>
+						<a class="page-numbers" href="#">6</a>
+						<a class="next page-numbers" href="#"><span>Cледующая&nbsp;</span>&gt;</a>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+</main>
+
+
+@@include('footer.html')

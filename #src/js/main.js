@@ -284,6 +284,39 @@ $(document).ready(function () {
 	// 	})
 	// }
 
+	function declOfNum(number, titles) {
+		cases = [2, 0, 1, 1, 1, 2];
+		return titles[(number % 100 > 4 && number % 100 < 20) ? 2 : cases[(number % 10 < 5) ? number % 10 : 5]];
+	}
+
+	if (document.querySelector('.toggle-archive')) {
+		$('.toggle-archive__open').on('click', function () {
+			$('.toggle-archive__top').addClass('active')
+			$('.toggle-archive__bot').stop().slideDown();
+		})
+
+		$('.toggle-archive__close').on('click', function () {
+			$('.toggle-archive__top').removeClass('active')
+			$('.toggle-archive__bot').stop().slideUp();
+		})
+
+		const fileInput = document.querySelectorAll('.custom-file input');
+
+		fileInput.forEach(function (input) {
+			input.addEventListener('change', (e) => {
+				console.log(e.currentTarget.files)
+				let filesLength = e.currentTarget.files.length;
+
+				if (filesLength) {
+					e.currentTarget.closest('.custom-file').querySelector('span').textContent = `${filesLength} ${declOfNum(filesLength, ['файл', 'файла', 'файлов'])}`
+				}
+			});
+		})
+
+
+	}
+
+
 
 
 
@@ -333,6 +366,9 @@ $(document).ready(function () {
 		smallBtn: false,
 		buttons: '',
 	});
+
+
+
 
 	// $('[data-fancybox="gal"]').fancybox({
 	// backFocus: false,

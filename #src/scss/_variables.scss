@@ -43,6 +43,7 @@ $hover-green: #01873d;
 		content: "";
 		position: absolute;
 		background: #000;
+		transition: 0.3s;
 	}
 	&::after {
 		top: 50%;

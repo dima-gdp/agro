@@ -191,6 +191,9 @@
 		}
 		[data-src="#modal-polit"] {
 			cursor: pointer;
+			&:hover {
+				text-decoration: underline;
+			}
 		}
 	}
 }

@@ -51,6 +51,16 @@ body {
 	}
 }
 
+.title-small {
+	font-weight: bold;
+	font-size: 34px;
+	line-height: 1;
+	color: #000000;
+	@media (max-width: 1440px) {
+		@include adaptiv(font-size, 34, 23, 1440, 320);
+	}
+}
+
 .help-img {
 	visibility: hidden;
 	opacity: 0;
@@ -88,6 +98,10 @@ div.wpcf7 .ajax-loader {
 
 span.wpcf7-not-valid-tip {
 	display: none;
+}
+
+.ajs-message {
+	font-size: 16px !important;
 }
 
 .alertify-notifier {
