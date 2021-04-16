@@ -13,8 +13,8 @@
 	height: calc(100% - 58px);
 	overflow-y: auto;
 	overflow-x: hidden;
-	transition-duration: 0.7s;
-	transition-timing-function: linear;
+	transition-duration: 0.5s;
+	transition-timing-function: ease-out;
 	@media (min-width: 421px) {
 		// width: 320px;
 	}
@@ -26,7 +26,8 @@
 
 	&.active {
 		top: 58px;
-		transition-delay: 0.7s;
+		transition-delay: 0.5s;
+		transition-timing-function: linear;
 		@media (min-width: 421px) {
 			top: 68px;
 		}

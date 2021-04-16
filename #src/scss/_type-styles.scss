@@ -1,3 +1,8 @@
+.page__title {
+	margin-bottom: 64px;
+	@include adaptiv(margin-bottom, 64, 30, 1440, 320);
+}
+
 .type-style {
 	h1 {
 		margin-bottom: 40px;
